@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-02-19T20:30:21.170Z",
+  "updatedAt": "2026-02-19T20:35:22.373Z",
   "columns": [
     {
       "id": "backlog",
@@ -25,7 +25,7 @@
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-02-19T20:30:21.170Z",
+      "updatedAt": "2026-02-19T20:35:22.373Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -34,11 +34,11 @@
           "everyMs": 300000,
           "anchorMs": 1771530619147
         },
-        "nextRunAtMs": 1771533019147,
+        "nextRunAtMs": 1771533319147,
         "lastRun": {
           "status": "ok",
-          "ts": 1771532734533,
-          "durationMs": 15380
+          "ts": 1771533035268,
+          "durationMs": 16113
         }
       }
     },
@@ -47,7 +47,7 @@
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-02-19T20:30:21.170Z",
+      "updatedAt": "2026-02-19T20:35:22.373Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -66,10 +66,10 @@
     },
     {
       "id": "system-errors",
-      "title": "Errors feed: 3 error / 2 warn (last 250 lines)",
+      "title": "Errors feed: 4 error / 2 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-02-19T20:30:21.170Z"
+      "updatedAt": "2026-02-19T20:35:22.373Z"
     }
   ]
 }
