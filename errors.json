@@ -1,17 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T22:00:22.482Z",
+  "updatedAt": "2026-02-19T22:05:24.360Z",
   "lines": [
-    "2026-02-19T21:50:47.792Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-02-20.md'",
-    "2026-02-19T21:50:47.792Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-02-20.md'",
-    "2026-02-19T21:50:51.319Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-02-19T21:50:51.324Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:69f12e20-c3dc-46f8-a482-c324eb27ecc7:b53f03cb-8487-484d-b0b5-41e1c64e91d5 error=Error: Outbound not configured for channel: whatsapp conn=1c501055…99d5 id=f44e5a37…985e",
-    "2026-02-19T21:50:51.326Z error Subagent completion direct announce failed for run b53f03cb-8487-484d-b0b5-41e1c64e91d5: Error: Outbound not configured for channel: whatsapp",
-    "2026-02-19T21:50:53.353Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=4cc81bbb…8863 id=5912e90f…0b67",
-    "2026-02-19T21:50:53.355Z error Subagent completion direct announce failed for run b53f03cb-8487-484d-b0b5-41e1c64e91d5: Error: Outbound not configured for channel: whatsapp",
-    "2026-02-19T21:50:57.379Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=525f8ff0…db94 id=81294124…285e",
-    "2026-02-19T21:50:57.381Z error Subagent completion direct announce failed for run b53f03cb-8487-484d-b0b5-41e1c64e91d5: Error: Outbound not configured for channel: whatsapp",
-    "2026-02-19T21:50:57.381Z info [warn] Subagent announce give up (retry-limit) run=b53f03cb-8487-484d-b0b5-41e1c64e91d5 child=agent:main:subagent:69f12e20-c3dc-46f8-a482-c324eb27ecc7 requester=agent:main:main retries=3 endedAgo=10s",
     "2026-02-19T21:51:06.642Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
     "2026-02-19T21:51:06.645Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:a454386c-d7d5-4bb6-ac21-d7953282923d:7df3b8ea-d58d-46cb-8267-ee53b9643622 error=Error: Outbound not configured for channel: whatsapp conn=c8947e2c…2d63 id=304a7489…7967",
     "2026-02-19T21:51:06.648Z error Subagent completion direct announce failed for run 7df3b8ea-d58d-46cb-8267-ee53b9643622: Error: Outbound not configured for channel: whatsapp",
@@ -37,6 +27,7 @@
     "2026-02-19T21:52:49.386Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit) cached=true conn=1e6a8816…d907 id=3a9d690c…c47d",
     "2026-02-19T21:52:49.387Z error Subagent completion direct announce failed for run e9ecc205-dc24-40f2-88e0-e53494d8dac4: Error: All models failed (1): openai-codex/gpt-5.2: Provider openai-codex is in cooldown (all profiles unavailable) (rate_limit)",
     "2026-02-19T21:52:49.387Z info [warn] Subagent announce give up (retry-limit) run=e9ecc205-dc24-40f2-88e0-e53494d8dac4 child=agent:main:subagent:2a39f72a-2c4c-41d8-b53c-d10a4cce4019 requester=agent:main:main retries=3 endedAgo=6s",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
