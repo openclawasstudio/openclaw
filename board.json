@@ -1,33 +1,75 @@
 {
-  "note": "Kanban board data for Mission Control. Public. Do not put secrets here.",
-  "updatedAt": "2026-02-19T00:00:00.000Z",
+  "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
+  "updatedAt": "2026-02-19T20:18:17.961Z",
   "columns": [
-    { "id": "backlog", "title": "Backlog" },
-    { "id": "doing", "title": "Doing" },
-    { "id": "blocked", "title": "Blocked" },
-    { "id": "done", "title": "Done" }
+    {
+      "id": "backlog",
+      "title": "Backlog"
+    },
+    {
+      "id": "doing",
+      "title": "Doing"
+    },
+    {
+      "id": "blocked",
+      "title": "Blocked"
+    },
+    {
+      "id": "done",
+      "title": "Done"
+    }
   ],
   "cards": [
     {
-      "id": "task-mc-1",
-      "title": "Mission Control: Kanban board UI",
+      "id": "cron-6c11e3ab-d92d-423c-a954-66e295bc2629",
+      "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
-      "status": "running",
-      "updatedAt": "2026-02-19T00:00:00.000Z"
+      "status": "ok",
+      "updatedAt": "2026-02-19T20:18:17.961Z",
+      "meta": {
+        "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
+        "enabled": true,
+        "schedule": {
+          "kind": "every",
+          "everyMs": 300000,
+          "anchorMs": 1771530619147
+        },
+        "nextRunAtMs": 1771532419147,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1771532132659,
+          "durationMs": 13504
+        }
+      }
     },
     {
-      "id": "task-mc-2",
-      "title": "Wire status.json into dashboard refresh",
-      "columnId": "done",
-      "status": "done",
-      "updatedAt": "2026-02-19T00:00:00.000Z"
+      "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
+      "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-02-19T20:18:17.961Z",
+      "meta": {
+        "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 8 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1771545600000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1771520535336,
+          "durationMs": 9086
+        }
+      }
     },
     {
-      "id": "task-mc-3",
-      "title": "Add errors feed (errors.json)",
+      "id": "system-errors",
+      "title": "Errors feed: 0 error / 3 warn (last 250 lines)",
       "columnId": "doing",
-      "status": "running",
-      "updatedAt": "2026-02-19T00:00:00.000Z"
+      "status": "warn",
+      "updatedAt": "2026-02-19T20:18:17.961Z"
     }
   ]
 }
