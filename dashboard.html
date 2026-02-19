@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Control</title>
+    <meta name="description" content="Static mission control dashboard for OpenClaw ops." />
+    <link rel="stylesheet" href="/mc.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <div class="kicker">MISSION CONTROL</div>
+        <h1>OpenClaw Dashboard</h1>
+        <p class="sub">Static UI (Vercel friendly). Optional refresh pulls JSON from a URL you set.</p>
+      </div>
+      <div class="actions">
+        <button id="refreshBtn">Refresh</button>
+        <button class="ghost" id="configBtn">Configure</button>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Quick links">
+      <a class="tile" id="tileControl" href="#" target="_blank" rel="noreferrer">
+        <div class="tileTitle">Control UI</div>
+        <div class="tileDesc">OpenClaw dashboard / control</div>
+        <div class="tileMeta" id="controlUrl">(set in config)</div>
+      </a>
+      <a class="tile" id="tileLogs" href="#" target="_blank" rel="noreferrer">
+        <div class="tileTitle">Logs</div>
+        <div class="tileDesc">Tail gateway logs (manual command)</div>
+        <div class="tileMeta mono">openclaw logs --follow</div>
+      </a>
+      <a class="tile" id="tileGitHub" href="https://github.com/openclawasstudio/openclaw" target="_blank" rel="noreferrer">
+        <div class="tileTitle">GitHub Repo</div>
+        <div class="tileDesc">Source of truth</div>
+        <div class="tileMeta">openclawasstudio/openclaw</div>
+      </a>
+      <a class="tile" id="tileVercel" href="#" target="_blank" rel="noreferrer">
+        <div class="tileTitle">Vercel</div>
+        <div class="tileDesc">Deployment dashboard</div>
+        <div class="tileMeta" id="vercelUrl">(set in config)</div>
+      </a>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Status</h2>
+        <div class="small" id="lastUpdated">Last updated: —</div>
+      </div>
+
+      <div class="statusGrid">
+        <div class="stat">
+          <div class="label">Gateway</div>
+          <div class="value" id="gateway">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Discord</div>
+          <div class="value" id="discord">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Model</div>
+          <div class="value" id="model">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Sessions</div>
+          <div class="value" id="sessions">—</div>
+        </div>
+      </div>
+
+      <details class="details">
+        <summary>Raw status JSON</summary>
+        <pre class="mono" id="raw">(empty)</pre>
+      </details>
+
+      <div class="note" id="note"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Cron / Reminders</h2>
+        <div class="small">Static list (for now)</div>
+      </div>
+      <ul class="list mono" id="cronList">
+        <li>openclaw cron list</li>
+        <li>openclaw cron runs &lt;jobId&gt;</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Quick Commands</h2>
+        <div class="small">Copy/paste helpers</div>
+      </div>
+      <div class="cmds">
+        <button class="cmd" data-copy="openclaw status">openclaw status</button>
+        <button class="cmd" data-copy="openclaw logs --follow">openclaw logs --follow</button>
+        <button class="cmd" data-copy="openclaw security audit">openclaw security audit</button>
+        <button class="cmd" data-copy="git status">git status</button>
+        <button class="cmd" data-copy="git add -A && git commit -m \"update\" && git push">git add/commit/push</button>
+      </div>
+      <div class="small" id="copyMsg"></div>
+    </section>
+
+    <dialog id="cfg">
+      <form method="dialog" class="modal">
+        <div class="modalHead">
+          <h3>Configure</h3>
+          <button class="x" value="cancel" aria-label="Close">×</button>
+        </div>
+
+        <label>
+          <span>OpenClaw Control UI URL</span>
+          <input id="cfgControl" placeholder="http://127.0.0.1:18789/" />
+        </label>
+
+        <label>
+          <span>Vercel Project URL (optional)</span>
+          <input id="cfgVercel" placeholder="https://vercel.com/<team>/<project>" />
+        </label>
+
+        <label>
+          <span>Status JSON URL (optional)</span>
+          <input id="cfgStatus" placeholder="https://example.com/status.json" />
+          <div class="hint">This page is static. If you provide a publicly reachable JSON URL, Refresh will fetch it.</div>
+        </label>
+
+        <div class="modalActions">
+          <button value="cancel" class="ghost">Cancel</button>
+          <button id="saveBtn" value="default">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/mc.js"></script>
+  </body>
+</html>
