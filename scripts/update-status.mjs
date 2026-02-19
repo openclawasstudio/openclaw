@@ -9,6 +9,7 @@ const execFileAsync = promisify(execFile);
 const ROOT = path.resolve(process.cwd());
 const OUT_PATH = path.join(ROOT, "status.json");
 const ERR_PATH = path.join(ROOT, "errors.json");
+const BOARD_PATH = path.join(ROOT, "board.json");
 
 function guessDiscordOk(channelSummary) {
   if (!Array.isArray(channelSummary)) return undefined;
@@ -32,32 +33,48 @@ async function gitCommitPushIfChanged(nowIso) {
   const changed = por
     .split("\n")
     .filter(Boolean)
-    .some((line) => /\s(status\.json|errors\.json)$/.test(line));
+    .some((line) => /\s(status\.json|errors\.json|board\.json)$/.test(line));
 
   if (!changed) {
     process.stdout.write("No status/errors change; skip git push.\n");
     return;
   }
 
-  await execFileAsync("git", ["add", "status.json", "errors.json"], { cwd: ROOT });
+  await execFileAsync("git", ["add", "status.json", "errors.json", "board.json"], { cwd: ROOT });
   await execFileAsync(
     "git",
-    ["commit", "-m", `chore: update feeds (${nowIso})`],
+    ["commit", "-m", `chore: update mission control (${nowIso})`],
     { cwd: ROOT }
   );
   await execFileAsync("git", ["push"], { cwd: ROOT });
   process.stdout.write("Committed + pushed feeds\n");
 }
 
+async function safeJson(cmd, args) {
+  const { stdout } = await execFileAsync(cmd, args, { maxBuffer: 10 * 1024 * 1024 });
+  return JSON.parse(stdout);
+}
+
+function cronCardStatus(job, lastRun) {
+  if (job?.enabled === false) return "disabled";
+  const st = lastRun?.status;
+  if (st === "error" || st === "failed") return "error";
+  if (st === "ok") return "ok";
+  return "unknown";
+}
+
+function cronColumn(job, lastRun) {
+  if (job?.enabled === false) return "done";
+  const st = lastRun?.status;
+  if (st === "error" || st === "failed") return "blocked";
+  return "doing";
+}
+
 async function main() {
   const nowIso = new Date().toISOString();
   const shouldPush = process.argv.includes("--push");
 
-  const { stdout } = await execFileAsync("openclaw", ["status", "--json"], {
-    maxBuffer: 10 * 1024 * 1024
-  });
-
-  const status = JSON.parse(stdout);
+  const status = await safeJson("openclaw", ["status", "--json"]);
 
   const payload = {
     note: "Auto-generated. Public. Do not put secrets here.",
@@ -78,7 +95,7 @@ async function main() {
     }
   };
 
-  // Pull last ~200 log lines and keep error/warn lines.
+  // Pull last ~250 log lines and keep error/warn lines.
   let errorLines = [];
   try {
     const { stdout: logs } = await execFileAsync(
@@ -100,9 +117,81 @@ async function main() {
     lines: errorLines
   };
 
+  // Build Kanban from cron jobs + last run status.
+  let board = {
+    note: "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
+    updatedAt: nowIso,
+    columns: [
+      { id: "backlog", title: "Backlog" },
+      { id: "doing", title: "Doing" },
+      { id: "blocked", title: "Blocked" },
+      { id: "done", title: "Done" }
+    ],
+    cards: []
+  };
+
+  try {
+    const cronList = await safeJson("openclaw", ["cron", "list", "--all", "--json"]);
+    const jobs = Array.isArray(cronList?.jobs) ? cronList.jobs : Array.isArray(cronList) ? cronList : [];
+
+    for (const j of jobs) {
+      const jobId = j.id || j.jobId;
+      let lastRun = null;
+      try {
+        const runs = await safeJson("openclaw", ["cron", "runs", "--id", String(jobId), "--limit", "1"]);
+        lastRun = runs?.entries?.[0] || null;
+      } catch {
+        // ignore
+      }
+
+      const card = {
+        id: `cron-${jobId}`,
+        title: j.name || `cron ${jobId}`,
+        columnId: cronColumn(j, lastRun),
+        status: cronCardStatus(j, lastRun),
+        updatedAt: nowIso,
+        meta: {
+          jobId,
+          enabled: j.enabled !== false,
+          schedule: j.schedule,
+          nextRunAtMs: j.state?.nextRunAtMs ?? lastRun?.nextRunAtMs,
+          lastRun: lastRun
+            ? {
+                status: lastRun.status,
+                ts: lastRun.ts,
+                durationMs: lastRun.durationMs
+              }
+            : null
+        }
+      };
+
+      board.cards.push(card);
+    }
+
+    // Add a synthetic card that summarizes current warnings.
+    const warnCount = errors.lines.filter((l) => /\bwarn\b/i.test(l)).length;
+    const errCount = errors.lines.filter((l) => /\berror\b/i.test(l)).length;
+    board.cards.push({
+      id: "system-errors",
+      title: `Errors feed: ${errCount} error / ${warnCount} warn (last 250 lines)`,
+      columnId: errCount > 0 ? "blocked" : warnCount > 0 ? "doing" : "done",
+      status: errCount > 0 ? "error" : warnCount > 0 ? "warn" : "ok",
+      updatedAt: nowIso
+    });
+  } catch (e) {
+    board.cards.push({
+      id: "cron-load-failed",
+      title: `Failed to load cron jobs: ${String(e)}`,
+      columnId: "blocked",
+      status: "error",
+      updatedAt: nowIso
+    });
+  }
+
   await fs.writeFile(OUT_PATH, JSON.stringify(payload, null, 2) + "\n", "utf8");
   await fs.writeFile(ERR_PATH, JSON.stringify(errors, null, 2) + "\n", "utf8");
-  process.stdout.write(`Wrote ${OUT_PATH} + ${ERR_PATH} @ ${nowIso}\n`);
+  await fs.writeFile(BOARD_PATH, JSON.stringify(board, null, 2) + "\n", "utf8");
+  process.stdout.write(`Wrote ${OUT_PATH} + ${ERR_PATH} + ${BOARD_PATH} @ ${nowIso}\n`);
 
   if (shouldPush) {
     await gitCommitPushIfChanged(nowIso);
