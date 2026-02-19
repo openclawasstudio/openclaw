@@ -1,8 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T22:25:22.915Z",
+  "updatedAt": "2026-02-19T22:30:21.428Z",
   "lines": [
-    "2026-02-19T22:17:20.017Z error announce queue drain failed for agent:main:main: Error: Error: Outbound not configured for channel: whatsapp",
     "2026-02-19T22:17:21.033Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 1ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=eb322fff…ee95 id=acfe6582…7bae",
     "2026-02-19T22:17:21.034Z error announce queue drain failed for agent:main:main: Error: Error: Outbound not configured for channel: whatsapp",
     "2026-02-19T22:17:22.045Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=bbea1e40…5b05 id=84aef1b9…c020",
@@ -41,6 +40,7 @@
     "2026-02-19T22:17:38.253Z error announce queue drain failed for agent:main:main: Error: Error: Outbound not configured for channel: whatsapp",
     "2026-02-19T22:17:44.546Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
     "2026-02-19T22:17:44.548Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:ebfd4b09-961a-48c1-ae93-58a1de9f08e5:f0769d84-5126-44d4-9195-5f94820889d8 error=Error: Outbound not configured for channel: whatsapp conn=c9e02482…9695 id=49eb7a15…8944",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
