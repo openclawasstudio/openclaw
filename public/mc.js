@@ -77,7 +77,7 @@ function setMockStatus() {
   );
 
   $("note").textContent =
-    "Tip: This is a static Vercel site. It can’t access your server’s localhost. If you want the Refresh button to show real status, publish a small JSON endpoint somewhere reachable (or later we add Vercel /api).";
+    "Tip: This is a static Vercel site. It can’t access your server’s localhost. Easiest option: point Status JSON URL to a public file in your GitHub repo (raw.githubusercontent.com) and update it by committing/pushing.";
 }
 
 function renderStatus(data) {
@@ -103,7 +103,8 @@ async function refresh() {
 
   try {
     setText("lastUpdated", "Last updated: fetching…");
-    const res = await fetch(cfg.statusUrl, { cache: "no-store" });
+    const url = cfg.statusUrl + (cfg.statusUrl.includes("?") ? "&" : "?") + "t=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     renderStatus(data);
