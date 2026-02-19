@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Control · Kanban</title>
+    <meta name="description" content="Trello-style Kanban board for OpenClaw ops." />
+    <link rel="stylesheet" href="/kanban.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <div class="kicker">MISSION CONTROL</div>
+        <h1>Kanban</h1>
+        <p class="sub">Static Trello-style board. Refresh pulls board.json + errors.json from a URL you set.</p>
+        <p class="sub"><a href="/dashboard.html">← Back to Dashboard</a></p>
+      </div>
+      <div class="actions">
+        <button id="refreshBtn">Refresh</button>
+        <button class="ghost" id="exportBtn">Export JSON</button>
+        <button class="ghost" id="importBtn">Import JSON</button>
+        <button class="ghost" id="configBtn">Configure</button>
+      </div>
+    </header>
+
+    <section class="board" id="board" aria-label="Kanban board"></section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Errors (latest)</h2>
+        <div class="small" id="errorsUpdated">—</div>
+      </div>
+      <pre class="mono" id="errors">(configure an Errors JSON URL, then Refresh)</pre>
+      <div class="small">Tip: server-side command: <span class="mono">openclaw logs --limit 200 --plain</span></div>
+    </section>
+
+    <dialog id="cfg">
+      <form method="dialog" class="modal">
+        <div class="modalHead">
+          <h3>Configure</h3>
+          <button class="x" value="cancel" aria-label="Close">×</button>
+        </div>
+
+        <label>
+          <span>Board JSON URL</span>
+          <input id="cfgBoard" placeholder="https://raw.githubusercontent.com/<user>/<repo>/main/board.json" />
+        </label>
+
+        <label>
+          <span>Errors JSON URL</span>
+          <input id="cfgErrors" placeholder="https://raw.githubusercontent.com/<user>/<repo>/main/errors.json" />
+        </label>
+
+        <div class="modalActions">
+          <button value="cancel" class="ghost">Cancel</button>
+          <button id="saveBtn" value="default">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="importDlg">
+      <form method="dialog" class="modal">
+        <div class="modalHead">
+          <h3>Import board.json</h3>
+          <button class="x" value="cancel" aria-label="Close">×</button>
+        </div>
+        <label>
+          <span>Paste JSON</span>
+          <textarea id="importText" rows="12" spellcheck="false"></textarea>
+        </label>
+        <div class="modalActions">
+          <button value="cancel" class="ghost">Cancel</button>
+          <button id="doImportBtn" value="default">Import</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/kanban.js"></script>
+  </body>
+</html>

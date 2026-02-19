@@ -1,0 +1,33 @@
+{
+  "note": "Kanban board data for Mission Control. Public. Do not put secrets here.",
+  "updatedAt": "2026-02-19T00:00:00.000Z",
+  "columns": [
+    { "id": "backlog", "title": "Backlog" },
+    { "id": "doing", "title": "Doing" },
+    { "id": "blocked", "title": "Blocked" },
+    { "id": "done", "title": "Done" }
+  ],
+  "cards": [
+    {
+      "id": "task-mc-1",
+      "title": "Mission Control: Kanban board UI",
+      "columnId": "doing",
+      "status": "running",
+      "updatedAt": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "task-mc-2",
+      "title": "Wire status.json into dashboard refresh",
+      "columnId": "done",
+      "status": "done",
+      "updatedAt": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "task-mc-3",
+      "title": "Add errors feed (errors.json)",
+      "columnId": "doing",
+      "status": "running",
+      "updatedAt": "2026-02-19T00:00:00.000Z"
+    }
+  ]
+}
