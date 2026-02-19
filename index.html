@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotteok x Vercel Test</title>
+    <meta name="description" content="Sample static page deployed from OpenClaw → GitHub → Vercel." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="badge">DEPLOY TEST</div>
+      <h1>It works 🎉</h1>
+      <p>
+        This page is deployed via <strong>OpenClaw → GitHub → Vercel</strong>.
+      </p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label">Repo</div>
+          <div class="value" id="repo">(loading)</div>
+        </div>
+        <div class="box">
+          <div class="label">Deployed at</div>
+          <div class="value" id="ts">(loading)</div>
+        </div>
+      </div>
+
+      <button id="btn">Click me</button>
+      <p class="hint" id="msg"></p>
+
+      <footer>
+        <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a>
+        ·
+        <a href="https://github.com/openclawasstudio/openclaw" target="_blank" rel="noreferrer">GitHub</a>
+      </footer>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
