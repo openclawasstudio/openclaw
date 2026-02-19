@@ -1,10 +1,10 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T20:13:44.679Z",
+  "updatedAt": "2026-02-19T20:15:22.386Z",
   "lines": [
-    "2026-02-19T19:40:57.957Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":136074,\"duration\":\"136.1 seconds\"} Slow listener detected",
     "2026-02-19T19:43:14.495Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":40333,\"duration\":\"40.3 seconds\"} Slow listener detected",
     "2026-02-19T19:47:27.248Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":51400,\"duration\":\"51.4 seconds\"} Slow listener detected",
-    "2026-02-19T19:50:54.098Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":131703,\"duration\":\"131.7 seconds\"} Slow listener detected"
+    "2026-02-19T19:50:54.098Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":131703,\"duration\":\"131.7 seconds\"} Slow listener detected",
+    "2026-02-19T20:14:09.267Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":177206,\"duration\":\"177.2 seconds\"} Slow listener detected"
   ]
 }
