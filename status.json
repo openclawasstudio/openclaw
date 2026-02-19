@@ -1,14 +1,37 @@
 {
-  "note": "Edit this file and push to GitHub to update Mission Control. This is public. Do not put secrets here.",
-  "updatedAt": "2026-02-19T00:00:00.000Z",
+  "note": "Auto-generated. Public. Do not put secrets here.",
+  "updatedAt": "2026-02-19T19:50:06.856Z",
   "gateway": {
     "ok": true,
-    "url": "ws://127.0.0.1:18789"
+    "dashboard": "http://127.0.0.1:18789/"
   },
   "discord": {
     "ok": true,
-    "channel": "#general"
+    "summary": [
+      "Discord: configured",
+      "  - default (token:config)"
+    ]
   },
   "model": "openai-codex/gpt-5.2",
-  "sessions": 0
+  "sessions": 4,
+  "raw": {
+    "heartbeat": {
+      "defaultAgentId": "main",
+      "agents": [
+        {
+          "agentId": "main",
+          "enabled": true,
+          "every": "30m",
+          "everyMs": 1800000
+        },
+        {
+          "agentId": "codex",
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null
+        }
+      ]
+    },
+    "queuedSystemEvents": 0
+  }
 }
