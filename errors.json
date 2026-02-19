@@ -1,9 +1,10 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T20:18:17.961Z",
+  "updatedAt": "2026-02-19T20:20:21.286Z",
   "lines": [
-    "2026-02-19T19:47:27.248Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":51400,\"duration\":\"51.4 seconds\"} Slow listener detected",
     "2026-02-19T19:50:54.098Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":131703,\"duration\":\"131.7 seconds\"} Slow listener detected",
-    "2026-02-19T20:14:09.267Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":177206,\"duration\":\"177.2 seconds\"} Slow listener detected"
+    "2026-02-19T20:14:09.267Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":177206,\"duration\":\"177.2 seconds\"} Slow listener detected",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-02-19T20:18:55.782Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":136377,\"duration\":\"136.4 seconds\"} Slow listener detected"
   ]
 }
