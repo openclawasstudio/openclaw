@@ -1,14 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T21:45:22.682Z",
+  "updatedAt": "2026-02-19T21:50:21.444Z",
   "lines": [
-    "2026-02-19T21:17:45.162Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-02-19T21:17:45.166Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:ff6994d7-e898-4a66-8512-fa176b0d1cbb:6e1f9d3a-0e4f-481b-b33d-db8d2b845708 error=Error: Outbound not configured for channel: whatsapp conn=3e8c0cab…ddde id=5d941b8c…ef1a",
-    "2026-02-19T21:17:52.277Z warn diagnostic {\"subsystem\":\"diagnostic\"} lane wait exceeded: lane=session:agent:main:main waitedMs=13222 queueAhead=0",
-    "2026-02-19T21:17:52.287Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-02-19T21:17:52.291Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:b701e701-f2b8-4ab9-b8ff-9e65c7f2d354:4d29e6b7-734b-49e5-8f44-23fcb6dba6b7 error=Error: Outbound not configured for channel: whatsapp conn=ce59ed12…21ff id=fdbb7ea9…98c8",
-    "2026-02-19T21:17:54.758Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-02-19T21:17:54.761Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:467feadd-99ab-4e74-921f-5f2eab2ca962:e3fb7023-774a-4b99-8c79-b94f17abe1b5 error=Error: Outbound not configured for channel: whatsapp conn=138e8754…c845 id=83d7e038…a634",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
