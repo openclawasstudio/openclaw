@@ -1,8 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-20T04:50:21.326Z",
+  "updatedAt": "2026-02-20T04:55:37.856Z",
   "lines": [
-    "      \"status\": \"error\",",
     "      \"error\": \"cron announce delivery failed\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
@@ -38,9 +37,10 @@
     "      \"error\": \"cron announce delivery failed\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
     "      \"status\": \"error\",",
     "      \"error\": \"cron announce delivery failed\",",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\","
+    "2026-02-20T04:55:29.857Z error [tools] exec failed: elevated is not available right now (runtime=direct)."
   ]
 }
