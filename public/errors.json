@@ -1,9 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-20T05:40:21.235Z",
+  "updatedAt": "2026-02-20T05:45:21.475Z",
   "lines": [
-    "        \"lastStatus\": \"error\",",
-    "      \"status\": \"error\",",
     "      \"error\": \"cron announce delivery failed\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
@@ -34,6 +32,8 @@
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "2026-02-20T05:27:21.315Z error [tools] edit failed: Missing required parameter: newText (newText or new_string). Supply correct parameters before retrying.",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
