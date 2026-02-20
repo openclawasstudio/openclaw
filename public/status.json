@@ -1,0 +1,37 @@
+{
+  "note": "Auto-generated. Public. Do not put secrets here.",
+  "updatedAt": "2026-02-20T05:16:19.980Z",
+  "gateway": {
+    "ok": true,
+    "dashboard": "http://127.0.0.1:18789/"
+  },
+  "discord": {
+    "ok": true,
+    "summary": [
+      "Discord: configured",
+      "  - default (token:config)"
+    ]
+  },
+  "model": "openai-codex/gpt-5.2",
+  "sessions": 13,
+  "raw": {
+    "heartbeat": {
+      "defaultAgentId": "main",
+      "agents": [
+        {
+          "agentId": "main",
+          "enabled": true,
+          "every": "30m",
+          "everyMs": 1800000
+        },
+        {
+          "agentId": "codex",
+          "enabled": false,
+          "every": "disabled",
+          "everyMs": null
+        }
+      ]
+    },
+    "queuedSystemEvents": 0
+  }
+}

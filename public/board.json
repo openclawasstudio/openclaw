@@ -1,0 +1,67 @@
+{
+  "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
+  "updatedAt": "2026-02-20T05:16:19.980Z",
+  "columns": [
+    {
+      "id": "backlog",
+      "title": "Backlog"
+    },
+    {
+      "id": "doing",
+      "title": "Doing"
+    },
+    {
+      "id": "blocked",
+      "title": "Blocked"
+    },
+    {
+      "id": "done",
+      "title": "Done"
+    }
+  ],
+  "cards": [
+    {
+      "id": "cron-6c11e3ab-d92d-423c-a954-66e295bc2629",
+      "title": "Update and push status.json for Mission Control",
+      "columnId": "doing",
+      "status": "unknown",
+      "updatedAt": "2026-02-20T05:16:19.980Z",
+      "meta": {
+        "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
+        "enabled": true,
+        "schedule": {
+          "kind": "every",
+          "everyMs": 300000,
+          "anchorMs": 1771530619147
+        },
+        "nextRunAtMs": 1771564819147,
+        "lastRun": null
+      }
+    },
+    {
+      "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
+      "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
+      "columnId": "doing",
+      "status": "unknown",
+      "updatedAt": "2026-02-20T05:16:19.980Z",
+      "meta": {
+        "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 8 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1771632000000,
+        "lastRun": null
+      }
+    },
+    {
+      "id": "system-errors",
+      "title": "Errors feed: 40 error / 0 warn (last 250 lines)",
+      "columnId": "blocked",
+      "status": "error",
+      "updatedAt": "2026-02-20T05:16:19.980Z"
+    }
+  ]
+}
