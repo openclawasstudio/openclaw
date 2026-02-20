@@ -7,8 +7,9 @@ const KEYS = {
 
 function cfgGet() {
   return {
-    boardUrl: localStorage.getItem(KEYS.boardUrl) || "",
-    errorsUrl: localStorage.getItem(KEYS.errorsUrl) || ""
+    // Default to same-origin feeds when available
+    boardUrl: localStorage.getItem(KEYS.boardUrl) || "/board.json",
+    errorsUrl: localStorage.getItem(KEYS.errorsUrl) || "/errors.json"
   };
 }
 
@@ -111,51 +112,23 @@ async function refresh() {
   const cfg = cfgGet();
 
   // board
-  if (!cfg.boardUrl) {
-    currentBoard = {
-      note: "Configure Board JSON URL",
-      updatedAt: new Date().toISOString(),
-      columns: [
-        { id: "backlog", title: "Backlog" },
-        { id: "doing", title: "Doing" },
-        { id: "blocked", title: "Blocked" },
-        { id: "done", title: "Done" }
-      ],
-      cards: [
-        {
-          id: "example-1",
-          title: "Set Board JSON URL",
-          columnId: "doing",
-          status: "todo",
-          updatedAt: new Date().toISOString()
-        }
-      ]
-    };
+  try {
+    currentBoard = await fetchJson(cfg.boardUrl);
     renderBoard(currentBoard);
-  } else {
-    try {
-      currentBoard = await fetchJson(cfg.boardUrl);
-      renderBoard(currentBoard);
-    } catch (e) {
-      currentBoard = null;
-      $("board").innerHTML = `<div class="col"><div class="colTitle">Board load failed</div><p class="small">${escapeHtml(String(e))}</p></div>`;
-    }
+  } catch (e) {
+    currentBoard = null;
+    $("board").innerHTML = `<div class="col"><div class="colTitle">Board load failed</div><p class="small">${escapeHtml(String(e))}</p><p class="small">Check: URL is public, returns JSON, no login required.</p></div>`;
   }
 
   // errors
-  if (!cfg.errorsUrl) {
-    $("errors").textContent = "(configure an Errors JSON URL, then Refresh)";
-    $("errorsUpdated").textContent = "—";
-  } else {
-    try {
-      const err = await fetchJson(cfg.errorsUrl);
-      const lines = Array.isArray(err?.lines) ? err.lines : [];
-      $("errors").textContent = lines.join("\n") || "(no errors)";
-      $("errorsUpdated").textContent = err?.updatedAt ? `Updated: ${new Date(err.updatedAt).toLocaleString()}` : "";
-    } catch (e) {
-      $("errors").textContent = `Errors load failed: ${String(e)}`;
-      $("errorsUpdated").textContent = "";
-    }
+  try {
+    const err = await fetchJson(cfg.errorsUrl);
+    const lines = Array.isArray(err?.lines) ? err.lines : [];
+    $("errors").textContent = lines.join("\n") || "(no errors)";
+    $("errorsUpdated").textContent = err?.updatedAt ? `Updated: ${new Date(err.updatedAt).toLocaleString()}` : "";
+  } catch (e) {
+    $("errors").textContent = `Errors load failed: ${String(e)}\nTip: set Errors JSON URL in Configure.`;
+    $("errorsUpdated").textContent = "";
   }
 }
 

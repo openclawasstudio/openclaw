@@ -7,9 +7,11 @@ import path from "node:path";
 const execFileAsync = promisify(execFile);
 
 const ROOT = path.resolve(process.cwd());
-const OUT_PATH = path.join(ROOT, "status.json");
-const ERR_PATH = path.join(ROOT, "errors.json");
-const BOARD_PATH = path.join(ROOT, "board.json");
+// Write feeds into public/ so they are served directly by Vercel at /status.json, /errors.json, /board.json
+const PUBLIC_DIR = path.join(ROOT, "public");
+const OUT_PATH = path.join(PUBLIC_DIR, "status.json");
+const ERR_PATH = path.join(PUBLIC_DIR, "errors.json");
+const BOARD_PATH = path.join(PUBLIC_DIR, "board.json");
 
 function guessDiscordOk(channelSummary) {
   if (!Array.isArray(channelSummary)) return undefined;
@@ -33,14 +35,14 @@ async function gitCommitPushIfChanged(nowIso) {
   const changed = por
     .split("\n")
     .filter(Boolean)
-    .some((line) => /\s(status\.json|errors\.json|board\.json)$/.test(line));
+    .some((line) => /\s(public\/(status|errors|board)\.json)$/.test(line));
 
   if (!changed) {
     process.stdout.write("No status/errors change; skip git push.\n");
     return;
   }
 
-  await execFileAsync("git", ["add", "status.json", "errors.json", "board.json"], { cwd: ROOT });
+  await execFileAsync("git", ["add", "public/status.json", "public/errors.json", "public/board.json"], { cwd: ROOT });
   await execFileAsync(
     "git",
     ["commit", "-m", `chore: update mission control (${nowIso})`],
@@ -138,7 +140,7 @@ async function main() {
       const jobId = j.id || j.jobId;
       let lastRun = null;
       try {
-        const runs = await safeJson("openclaw", ["cron", "runs", "--id", String(jobId), "--limit", "1"]);
+        const runs = await safeJson("openclaw", ["cron", "runs", "--id", String(jobId), "--limit", "1", "--json"]);
         lastRun = runs?.entries?.[0] || null;
       } catch {
         // ignore

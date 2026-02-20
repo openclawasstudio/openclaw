@@ -10,7 +10,8 @@ function getCfg() {
   return {
     controlUrl: localStorage.getItem(KEYS.controlUrl) || "",
     vercelUrl: localStorage.getItem(KEYS.vercelUrl) || "",
-    statusUrl: localStorage.getItem(KEYS.statusUrl) || ""
+    // Default to same-origin feed when available
+    statusUrl: localStorage.getItem(KEYS.statusUrl) || "/status.json"
   };
 }
 
