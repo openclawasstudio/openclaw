@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-02-19T23:55:22.766Z",
+  "updatedAt": "2026-02-20T00:00:56.937Z",
   "columns": [
     {
       "id": "backlog",
@@ -25,7 +25,7 @@
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-02-19T23:55:22.766Z",
+      "updatedAt": "2026-02-20T00:00:56.937Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -34,20 +34,20 @@
           "everyMs": 300000,
           "anchorMs": 1771530619147
         },
-        "nextRunAtMs": 1771545319147,
+        "nextRunAtMs": 1771545619147,
         "lastRun": {
           "status": "ok",
-          "ts": 1771545037470,
-          "durationMs": 18317
+          "ts": 1771545338533,
+          "durationMs": 19381
         }
       }
     },
     {
       "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
-      "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-02-19T23:55:22.766Z",
+      "columnId": "blocked",
+      "status": "error",
+      "updatedAt": "2026-02-20T00:00:56.937Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -56,20 +56,20 @@
           "expr": "0 8 * * *",
           "tz": "Asia/Hong_Kong"
         },
-        "nextRunAtMs": 1771545600000,
+        "nextRunAtMs": 1771632000000,
         "lastRun": {
-          "status": "ok",
-          "ts": 1771520535336,
-          "durationMs": 9086
+          "status": "error",
+          "ts": 1771545648769,
+          "durationMs": 48730
         }
       }
     },
     {
       "id": "system-errors",
-      "title": "Errors feed: 6 error / 0 warn (last 250 lines)",
+      "title": "Errors feed: 7 error / 0 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-02-19T23:55:22.766Z"
+      "updatedAt": "2026-02-20T00:00:56.937Z"
     }
   ]
 }

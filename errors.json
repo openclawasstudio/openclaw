@@ -1,12 +1,13 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-19T23:55:22.766Z",
+  "updatedAt": "2026-02-20T00:00:56.937Z",
   "lines": [
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
+    "2026-02-20T00:00:48.731Z error Subagent completion direct announce failed for run 409d1e2e-b3f4-4265-aa75-fad679e46770:cc755ff0-d52a-45a6-a737-57dc1a006d50: gateway timeout after 15000ms",
+    "2026-02-20T00:00:48.769Z info cron {\"module\":\"cron\",\"storePath\":\"/home/claw/.openclaw/cron/jobs.json\"} {\"jobId\":\"409d1e2e-b3f4-4265-aa75-fad679e46770\",\"consecutiveErrors\":1,\"backoffMs\":30000,\"nextRunAtMs\":1771632000000} cron: applying error backoff"
   ]
 }
