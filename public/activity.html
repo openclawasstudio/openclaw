@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity · Mission Control</title>
+    <meta name="description" content="Activity feed: cron jobs, git commits, and OpenClaw sessions." />
+    <link rel="stylesheet" href="/mc.css" />
+    <link rel="stylesheet" href="/activity.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <div class="kicker">MISSION CONTROL</div>
+        <h1>Activity Feed</h1>
+        <p class="sub">Auto-generated feed from <span class="mono">/activity.json</span> (same-origin).</p>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="/dashboard.html">Back</a>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Events</h2>
+        <div class="small" id="lastUpdated">Last updated: —</div>
+      </div>
+
+      <div class="filters" aria-label="Filters">
+        <label class="filter">
+          <span>Type</span>
+          <select id="typeFilter">
+            <option value="">All</option>
+            <option value="cron">Cron</option>
+            <option value="git">Git</option>
+            <option value="session">Session</option>
+          </select>
+        </label>
+        <label class="filter">
+          <span>Severity</span>
+          <select id="sevFilter">
+            <option value="">All</option>
+            <option value="error">error</option>
+            <option value="warn">warn</option>
+            <option value="ok">ok</option>
+            <option value="info">info</option>
+          </select>
+        </label>
+        <label class="filter">
+          <span>Search</span>
+          <input id="q" placeholder="title / summary" />
+        </label>
+      </div>
+
+      <div class="note" id="note"></div>
+
+      <div id="list" class="events" aria-label="Activity events"></div>
+
+      <details class="details">
+        <summary>Raw activity JSON</summary>
+        <pre class="mono" id="raw">(empty)</pre>
+      </details>
+    </section>
+
+    <script src="/activity.js"></script>
+  </body>
+</html>

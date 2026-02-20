@@ -12,6 +12,7 @@ const PUBLIC_DIR = path.join(ROOT, "public");
 const OUT_PATH = path.join(PUBLIC_DIR, "status.json");
 const ERR_PATH = path.join(PUBLIC_DIR, "errors.json");
 const BOARD_PATH = path.join(PUBLIC_DIR, "board.json");
+const ACTIVITY_PATH = path.join(PUBLIC_DIR, "activity.json");
 
 function guessDiscordOk(channelSummary) {
   if (!Array.isArray(channelSummary)) return undefined;
@@ -35,14 +36,18 @@ async function gitCommitPushIfChanged(nowIso) {
   const changed = por
     .split("\n")
     .filter(Boolean)
-    .some((line) => /\s(public\/(status|errors|board)\.json)$/.test(line));
+    .some((line) => /\s(public\/(status|errors|board|activity)\.json)$/.test(line));
 
   if (!changed) {
     process.stdout.write("No status/errors change; skip git push.\n");
     return;
   }
 
-  await execFileAsync("git", ["add", "public/status.json", "public/errors.json", "public/board.json"], { cwd: ROOT });
+  await execFileAsync(
+    "git",
+    ["add", "public/status.json", "public/errors.json", "public/board.json", "public/activity.json"],
+    { cwd: ROOT }
+  );
   await execFileAsync(
     "git",
     ["commit", "-m", `chore: update mission control (${nowIso})`],
@@ -70,6 +75,33 @@ function cronColumn(job, lastRun) {
   const st = lastRun?.status;
   if (st === "error" || st === "failed") return "blocked";
   return "doing";
+}
+
+function toIso(ts, fallbackIso) {
+  if (!ts) return fallbackIso;
+  if (typeof ts === "string") {
+    const d = new Date(ts);
+    return Number.isNaN(d.getTime()) ? fallbackIso : d.toISOString();
+  }
+  if (typeof ts === "number") {
+    const d = new Date(ts);
+    return Number.isNaN(d.getTime()) ? fallbackIso : d.toISOString();
+  }
+  return fallbackIso;
+}
+
+function sevFromCronStatus(st, enabled = true) {
+  if (enabled === false) return "info";
+  if (st === "error" || st === "failed") return "error";
+  if (st === "ok") return "ok";
+  if (st === "warn") return "warn";
+  return "info";
+}
+
+function fmtDur(ms) {
+  if (ms === null || ms === undefined) return "—";
+  const s = Math.round((ms / 1000) * 10) / 10;
+  return `${s}s`;
 }
 
 async function main() {
@@ -117,6 +149,12 @@ async function main() {
     note: "Auto-generated from gateway logs (filtered warn/error). Public.",
     updatedAt: nowIso,
     lines: errorLines
+  };
+
+  // Activity feed (cron + git + sessions). Public. Keep it lightweight.
+  const activity = {
+    updatedAt: nowIso,
+    events: []
   };
 
   // Build Kanban from cron jobs + last run status.
@@ -168,6 +206,61 @@ async function main() {
       };
 
       board.cards.push(card);
+
+      // Activity event for this job (last run summary). If error, also fetch last 3 runs.
+      const last = card.meta?.lastRun;
+      const enabled = card.meta?.enabled !== false;
+      const lastSt = last?.status;
+      const lastTsIso = toIso(last?.ts, nowIso);
+      activity.events.push({
+        ts: lastTsIso,
+        type: "cron",
+        title: `Cron: ${card.title}`,
+        summary: last
+          ? `${lastSt || "unknown"} · duration ${fmtDur(last.durationMs)}`
+          : enabled
+            ? "No runs yet"
+            : "Disabled",
+        severity: sevFromCronStatus(lastSt, enabled),
+        meta: {
+          jobId: card.meta?.jobId,
+          enabled,
+          schedule: card.meta?.schedule,
+          lastRun: last || null
+        }
+      });
+
+      if (enabled && (lastSt === "error" || lastSt === "failed")) {
+        try {
+          const runs = await safeJson("openclaw", [
+            "cron",
+            "runs",
+            "--id",
+            String(jobId),
+            "--limit",
+            "3",
+            "--json"
+          ]);
+          const entries = Array.isArray(runs?.entries) ? runs.entries : [];
+          for (const r of entries) {
+            activity.events.push({
+              ts: toIso(r?.ts, nowIso),
+              type: "cron",
+              title: `Cron failed: ${card.title}`,
+              summary: `${r?.status || "error"} · duration ${fmtDur(r?.durationMs)}`,
+              severity: "error",
+              meta: {
+                jobId: card.meta?.jobId,
+                status: r?.status,
+                ts: r?.ts,
+                durationMs: r?.durationMs
+              }
+            });
+          }
+        } catch {
+          // ignore
+        }
+      }
     }
 
     // Add a synthetic card that summarizes current warnings.
@@ -190,10 +283,65 @@ async function main() {
     });
   }
 
+  // Git activity (last 20 commits)
+  try {
+    const { stdout } = await execFileAsync(
+      "git",
+      ["log", "-n", "20", "--pretty=format:%H|%an|%ad|%s", "--date=iso"],
+      { cwd: ROOT, maxBuffer: 10 * 1024 * 1024 }
+    );
+
+    const lines = stdout.split("\n").filter(Boolean);
+    for (const line of lines) {
+      const [hash, author, ad, subject] = line.split("|");
+      const tsIso = toIso(ad, nowIso);
+      const short = (hash || "").slice(0, 7);
+      activity.events.push({
+        ts: tsIso,
+        type: "git",
+        title: `Git: ${subject || short || "commit"}`,
+        summary: `${author || "unknown"} · ${short}`,
+        severity: "info",
+        meta: { hash, author, subject, date: ad }
+      });
+    }
+  } catch {
+    // ignore
+  }
+
+  // Session/subagent activity (from openclaw status --json)
+  try {
+    const recent = Array.isArray(status?.sessions?.recent) ? status.sessions.recent : [];
+    for (const s of recent) {
+      const tsIso = toIso(s?.updatedAt, nowIso);
+      const key = s?.key || s?.id || "session";
+      const model = s?.model ? normalizeModel(s.model) : undefined;
+      activity.events.push({
+        ts: tsIso,
+        type: "session",
+        title: `Session: ${key}`,
+        summary: `${model || "—"}${s?.age ? ` · age ${s.age}` : ""}`,
+        severity: "info",
+        meta: {
+          key: s?.key,
+          updatedAt: s?.updatedAt,
+          age: s?.age,
+          model: s?.model
+        }
+      });
+    }
+  } catch {
+    // ignore
+  }
+
+  // Newest-first
+  activity.events.sort((a, b) => (a.ts < b.ts ? 1 : a.ts > b.ts ? -1 : 0));
+
   await fs.writeFile(OUT_PATH, JSON.stringify(payload, null, 2) + "\n", "utf8");
   await fs.writeFile(ERR_PATH, JSON.stringify(errors, null, 2) + "\n", "utf8");
   await fs.writeFile(BOARD_PATH, JSON.stringify(board, null, 2) + "\n", "utf8");
-  process.stdout.write(`Wrote ${OUT_PATH} + ${ERR_PATH} + ${BOARD_PATH} @ ${nowIso}\n`);
+  await fs.writeFile(ACTIVITY_PATH, JSON.stringify(activity, null, 2) + "\n", "utf8");
+  process.stdout.write(`Wrote ${OUT_PATH} + ${ERR_PATH} + ${BOARD_PATH} + ${ACTIVITY_PATH} @ ${nowIso}\n`);
 
   if (shouldPush) {
     await gitCommitPushIfChanged(nowIso);

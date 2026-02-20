@@ -1,0 +1,429 @@
+{
+  "updatedAt": "2026-02-20T05:28:53.503Z",
+  "events": [
+    {
+      "ts": "2026-02-20T05:28:53.503Z",
+      "type": "cron",
+      "title": "Cron: Update and push status.json for Mission Control",
+      "summary": "No runs yet",
+      "severity": "info",
+      "meta": {
+        "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
+        "enabled": true,
+        "schedule": {
+          "kind": "every",
+          "everyMs": 300000,
+          "anchorMs": 1771530619147
+        },
+        "lastRun": null
+      }
+    },
+    {
+      "ts": "2026-02-20T05:28:53.503Z",
+      "type": "cron",
+      "title": "Cron: Morning briefing (HK) - weather + OpenClaw/AI news",
+      "summary": "No runs yet",
+      "severity": "info",
+      "meta": {
+        "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 8 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "lastRun": null
+      }
+    },
+    {
+      "ts": "2026-02-20T05:27:14.128Z",
+      "type": "session",
+      "title": "Session: agent:main:discord:channel:1473623046156980359",
+      "summary": "openai-codex/gpt-5.2 · age 102736",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:discord:channel:1473623046156980359",
+        "updatedAt": 1771565234128,
+        "age": 102736,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:27:09.779Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:67daa8e4-cdda-42b5-9670-535810433cd4",
+      "summary": "openai-codex/gpt-5.2 · age 107085",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:67daa8e4-cdda-42b5-9670-535810433cd4",
+        "updatedAt": 1771565229779,
+        "age": 107085,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:26:06.762Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:dde2bfdb-ed34-4bd0-be26-031018e54a08",
+      "summary": "openai-codex/gpt-5.2 · age 170102",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:dde2bfdb-ed34-4bd0-be26-031018e54a08",
+        "updatedAt": 1771565166762,
+        "age": 170102,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:26:05.722Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:4aff533c-3128-41d8-a897-a7dcf1f50d4e",
+      "summary": "openai-codex/gpt-5.2 · age 171142",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:4aff533c-3128-41d8-a897-a7dcf1f50d4e",
+        "updatedAt": 1771565165722,
+        "age": 171142,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:26:04.136Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:68c2dd73-8df2-4b95-ba34-c5fced5716bc",
+      "summary": "openai-codex/gpt-5.2 · age 172728",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:68c2dd73-8df2-4b95-ba34-c5fced5716bc",
+        "updatedAt": 1771565164136,
+        "age": 172728,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:25:44.278Z",
+      "type": "session",
+      "title": "Session: agent:main:main",
+      "summary": "openai-codex/gpt-5.2 · age 192586",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:main",
+        "updatedAt": 1771565144278,
+        "age": 192586,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:25:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:25:21.187Z)",
+      "summary": "claw · 0edc326",
+      "severity": "info",
+      "meta": {
+        "hash": "0edc3269b786d894fe75115f3d19ad083a62c579",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:25:21.187Z)",
+        "date": "2026-02-20 05:25:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:25:19.157Z",
+      "type": "session",
+      "title": "Session: agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629",
+      "summary": "openai-codex/gpt-5.2 · age 217707",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629",
+        "updatedAt": 1771565119157,
+        "age": 217707,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:25:19.157Z",
+      "type": "session",
+      "title": "Session: agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:e4fb580f-d2e1-4f3b-b883-03f2dad20d72",
+      "summary": "openai-codex/gpt-5.2 · age 217707",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:e4fb580f-d2e1-4f3b-b883-03f2dad20d72",
+        "updatedAt": 1771565119157,
+        "age": 217707,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:25:15.661Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:5be16224-4760-482c-9504-db82414c015c",
+      "summary": "openai-codex/gpt-5.2 · age 221203",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:5be16224-4760-482c-9504-db82414c015c",
+        "updatedAt": 1771565115661,
+        "age": 221203,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:20:31.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:20:23.526Z)",
+      "summary": "claw · 9f96853",
+      "severity": "info",
+      "meta": {
+        "hash": "9f968533738e6f70e36aabbc5aa6f369cc9921ab",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:20:23.526Z)",
+        "date": "2026-02-20 05:20:31 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:16:39.000Z",
+      "type": "git",
+      "title": "Git: Serve feeds from public/ + default URLs + fix cron runs JSON",
+      "summary": "claw · 652eb4c",
+      "severity": "info",
+      "meta": {
+        "hash": "652eb4c105c30344c4e733a722ad161b66a1e6e2",
+        "author": "claw",
+        "subject": "Serve feeds from public/ + default URLs + fix cron runs JSON",
+        "date": "2026-02-20 05:16:39 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:16:28.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:16:19.980Z)",
+      "summary": "claw · df0bdc7",
+      "severity": "info",
+      "meta": {
+        "hash": "df0bdc71d48cc1047cdc2c5871a70c9aee318137",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:16:19.980Z)",
+        "date": "2026-02-20 05:16:28 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:15:43.688Z",
+      "type": "session",
+      "title": "Session: agent:main:subagent:512a87e1-1379-42fb-89d1-139345a4672e",
+      "summary": "openai-codex/gpt-5.2 · age 793176",
+      "severity": "info",
+      "meta": {
+        "key": "agent:main:subagent:512a87e1-1379-42fb-89d1-139345a4672e",
+        "updatedAt": 1771564543688,
+        "age": 793176,
+        "model": "gpt-5.2"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:15:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:15:21.485Z)",
+      "summary": "claw · b13dcc3",
+      "severity": "info",
+      "meta": {
+        "hash": "b13dcc3ba138823336fc6e6ffe0764d2a803635f",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:15:21.485Z)",
+        "date": "2026-02-20 05:15:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:10:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:10:22.022Z)",
+      "summary": "claw · 3ebc28b",
+      "severity": "info",
+      "meta": {
+        "hash": "3ebc28b554930051fa384de49b1367f0098089ee",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:10:22.022Z)",
+        "date": "2026-02-20 05:10:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:05:29.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:05:21.300Z)",
+      "summary": "claw · 32072d9",
+      "severity": "info",
+      "meta": {
+        "hash": "32072d93fc1ec2da77cf7ee93028d6774b3cf391",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:05:21.300Z)",
+        "date": "2026-02-20 05:05:29 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T05:00:31.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T05:00:23.446Z)",
+      "summary": "claw · bd5cf87",
+      "severity": "info",
+      "meta": {
+        "hash": "bd5cf8776e621e922a46c8ced2b8808b09299902",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T05:00:23.446Z)",
+        "date": "2026-02-20 05:00:31 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:55:47.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:55:37.856Z)",
+      "summary": "claw · 4b9c8b4",
+      "severity": "info",
+      "meta": {
+        "hash": "4b9c8b4c84f1095a7abd40065d64dd8b0a2a6260",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:55:37.856Z)",
+        "date": "2026-02-20 04:55:47 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:50:29.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:50:21.326Z)",
+      "summary": "claw · b2bff72",
+      "severity": "info",
+      "meta": {
+        "hash": "b2bff725ed291b95f19ca72a77fd6b273cd453a5",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:50:21.326Z)",
+        "date": "2026-02-20 04:50:29 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:45:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:45:21.539Z)",
+      "summary": "claw · a2f10d7",
+      "severity": "info",
+      "meta": {
+        "hash": "a2f10d7ed4c1dee79e3a08c14af26f744183a507",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:45:21.539Z)",
+        "date": "2026-02-20 04:45:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:40:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:40:21.122Z)",
+      "summary": "claw · a99c4cf",
+      "severity": "info",
+      "meta": {
+        "hash": "a99c4cfa2e731aa5ecf7f02be7be594cb58927b1",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:40:21.122Z)",
+        "date": "2026-02-20 04:40:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:35:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:35:21.268Z)",
+      "summary": "claw · 736066d",
+      "severity": "info",
+      "meta": {
+        "hash": "736066d83e65f40b848e94aa15832c93143f6418",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:35:21.268Z)",
+        "date": "2026-02-20 04:35:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:30:31.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:30:23.729Z)",
+      "summary": "claw · b6a99bd",
+      "severity": "info",
+      "meta": {
+        "hash": "b6a99bdd2d49384984ca72f2cc6150e22d7d1bb8",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:30:23.729Z)",
+        "date": "2026-02-20 04:30:31 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:25:29.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:25:21.192Z)",
+      "summary": "claw · 5bca42e",
+      "severity": "info",
+      "meta": {
+        "hash": "5bca42e1be186acb50b090c0df1e569d3da7bfa0",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:25:21.192Z)",
+        "date": "2026-02-20 04:25:29 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:20:29.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:20:21.280Z)",
+      "summary": "claw · f644cae",
+      "severity": "info",
+      "meta": {
+        "hash": "f644cae5afb7aa03c4536e22d3a6aefc71b2a569",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:20:21.280Z)",
+        "date": "2026-02-20 04:20:29 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:15:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:15:22.006Z)",
+      "summary": "claw · f411922",
+      "severity": "info",
+      "meta": {
+        "hash": "f4119223a70ce2bc2762cc3e8ebeca32aa46b8cb",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:15:22.006Z)",
+        "date": "2026-02-20 04:15:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:10:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:10:21.662Z)",
+      "summary": "claw · f688b2e",
+      "severity": "info",
+      "meta": {
+        "hash": "f688b2e0aac232a0e433ac7f75dc8241dcb70a7c",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:10:21.662Z)",
+        "date": "2026-02-20 04:10:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:05:30.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:05:21.559Z)",
+      "summary": "claw · ce28143",
+      "severity": "info",
+      "meta": {
+        "hash": "ce2814355bde6ef2ad1ffabe6026ad1f944135ef",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:05:21.559Z)",
+        "date": "2026-02-20 04:05:30 +0000"
+      }
+    },
+    {
+      "ts": "2026-02-20T04:00:31.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-02-20T04:00:22.923Z)",
+      "summary": "claw · 2763b51",
+      "severity": "info",
+      "meta": {
+        "hash": "2763b5173eb0d2e2d20e873abe3981cfb0393989",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-02-20T04:00:22.923Z)",
+        "date": "2026-02-20 04:00:31 +0000"
+      }
+    }
+  ]
+}
