@@ -1,19 +1,5 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-23T23:00:47.576Z",
-  "lines": [
-    "2026-02-23T01:11:50.742Z error [tools] web_fetch failed: fetch failed",
-    "2026-02-23T09:41:48.409Z error [tools] web_fetch failed: fetch failed",
-    "2026-02-23T13:01:08.531Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/paper_portfolio.json'",
-    "2026-02-23T13:01:36.478Z error [tools] browser failed: Can't reach the OpenClaw browser control service. Restart the OpenClaw gateway (OpenClaw.app menubar, or `openclaw gateway`). Do NOT retry the browser tool — it will keep failing. Use an alternative approach or inform the user that the browser is currently unavailable. (Error: Error: Chrome extension relay is running, but no tab is connected. Click the OpenClaw Chrome extension icon on a tab to attach it (profile \"chrome\").)",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\",",
-    "        \"lastStatus\": \"error\",",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\",",
-    "        \"lastStatus\": \"error\",",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\",",
-    "        \"lastStatus\": \"error\","
-  ]
+  "updatedAt": "2026-02-24T01:00:47.583Z",
+  "lines": []
 }
