@@ -1,5 +1,11 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-24T01:00:47.583Z",
-  "lines": []
+  "updatedAt": "2026-02-24T02:00:48.269Z",
+  "lines": [
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
+    "        \"lastStatus\": \"error\",",
+    "        \"lastStatus\": \"error\",",
+    "        \"lastError\": \"Error: cron: job execution timed out\""
+  ]
 }
