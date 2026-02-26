@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-26T21:00:48.258Z",
+  "updatedAt": "2026-02-26T23:00:49.271Z",
   "lines": [
     "2026-02-26T00:11:49.235Z error [tools] web_fetch failed: fetch failed",
     "2026-02-26T04:11:53.516Z error [tools] web_fetch failed: Web fetch failed (404): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -13,6 +13,11 @@
     "2026-02-26T13:04:47.326Z error [tools] message failed: Action send requires a target.",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "2026-02-26T19:01:04.028Z error [tools] edit failed: Could not find the exact text in /home/claw/.openclaw/workspace/MISSION_CONTROL.md. The old text must match exactly including all whitespace and newlines."
+    "2026-02-26T19:01:04.028Z error [tools] edit failed: Could not find the exact text in /home/claw/.openclaw/workspace/MISSION_CONTROL.md. The old text must match exactly including all whitespace and newlines.",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-02-26T22:33:15.104Z error [tools] web_fetch failed: fetch failed",
+    "2026-02-26T22:33:15.792Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
+    "2026-02-26T22:33:25.423Z error [tools] web_fetch failed: fetch failed"
   ]
 }
