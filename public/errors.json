@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-02-26T17:00:48.664Z",
+  "updatedAt": "2026-02-26T18:00:47.378Z",
   "lines": [
     "2026-02-26T00:11:49.235Z error [tools] web_fetch failed: fetch failed",
     "2026-02-26T04:11:53.516Z error [tools] web_fetch failed: Web fetch failed (404): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -10,6 +10,7 @@
     "2026-02-26T04:11:54.365Z error [tools] web_fetch failed: Web fetch failed (404): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-02-26T04:12:46.468Z error [tools] browser failed: Can't reach the OpenClaw browser control service. Restart the OpenClaw gateway (OpenClaw.app menubar, or `openclaw gateway`). Do NOT retry the browser tool — it will keep failing. Use an alternative approach or inform the user that the browser is currently unavailable. (Error: Error: Chrome extension relay is running, but no tab is connected. Click the OpenClaw Chrome extension icon on a tab to attach it (profile \"chrome\").)",
     "2026-02-26T04:14:58.147Z error [tools] edit failed: Missing required parameter: oldText (oldText or old_string). Supply correct parameters before retrying.",
-    "2026-02-26T13:04:47.326Z error [tools] message failed: Action send requires a target."
+    "2026-02-26T13:04:47.326Z error [tools] message failed: Action send requires a target.",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
