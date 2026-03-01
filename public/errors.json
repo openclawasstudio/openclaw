@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-01T07:00:49.062Z",
+  "updatedAt": "2026-03-01T09:00:49.587Z",
   "lines": [
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
@@ -13,6 +13,7 @@
     "2026-03-01T04:45:21.009Z error [tools] message failed: Explicit message target required for this run. Provide target/targets (and channel when needed).",
     "2026-03-01T04:45:23.009Z error [tools] web_fetch failed: fetch failed",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "2026-03-01T05:18:01.992Z error [tools] message failed: Explicit message target required for this run. Provide target/targets (and channel when needed)."
+    "2026-03-01T05:18:01.992Z error [tools] message failed: Explicit message target required for this run. Provide target/targets (and channel when needed).",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
