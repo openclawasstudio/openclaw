@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-02T15:00:46.796Z",
+  "updatedAt": "2026-03-02T17:00:49.481Z",
   "lines": [
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
@@ -27,6 +27,9 @@
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\","
+    "        \"lastStatus\": \"error\",",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
+    "2026-03-02T16:41:55.143Z error [tools] message failed: Action read requires a target."
   ]
 }
