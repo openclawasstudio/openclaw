@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-02T13:06:07.982Z",
+  "updatedAt": "2026-03-02T15:00:46.796Z",
   "lines": [
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
@@ -18,6 +18,8 @@
     "2026-03-02T04:12:04.122Z error [tools] web_fetch failed: Web fetch failed (404): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":\"market not found\"}",
     "2026-03-02T04:12:04.128Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-02.md'",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
