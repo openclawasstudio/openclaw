@@ -1,9 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-03T15:00:47.244Z",
+  "updatedAt": "2026-03-03T17:00:50.451Z",
   "lines": [
-    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "        \"lastStatus\": \"error\",",
     "2026-03-03T07:02:11.546Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"discord\" while bound to \"webchat\".",
@@ -41,6 +39,8 @@
     "2026-03-03T14:38:20.069Z error [tools] web_fetch failed: fetch failed",
     "2026-03-03T14:38:26.889Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
-    "2026-03-03T14:38:49.035Z error [tools] web_fetch failed: fetch failed"
+    "2026-03-03T14:38:49.035Z error [tools] web_fetch failed: fetch failed",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\","
   ]
 }
