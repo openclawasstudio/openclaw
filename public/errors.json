@@ -1,14 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-03T21:00:47.212Z",
+  "updatedAt": "2026-03-03T23:00:49.175Z",
   "lines": [
-    "2026-03-03T07:02:21.688Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
-    "2026-03-03T07:32:30.445Z error [tools] web_fetch failed: fetch failed",
-    "2026-03-03T07:32:34.180Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "{\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\",\"error\":true}",
-    "2026-03-03T08:32:11.971Z error [tools] web_fetch failed: fetch failed",
-    "2026-03-03T08:32:17.163Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\",\"error\":true}",
     "2026-03-03T08:32:28.978Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"discord\" while bound to \"webchat\".",
     "2026-03-03T08:32:37.971Z error [tools] web_fetch failed: fetch failed",
@@ -41,6 +34,13 @@
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "        \"lastStatus\": \"error\","
+    "        \"lastStatus\": \"error\",",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\",",
+    "2026-03-03T21:31:23.087Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-04.md'",
+    "2026-03-03T21:31:30.116Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-04.md'",
+    "2026-03-03T21:31:37.398Z error [tools] web_fetch failed: fetch failed",
+    "2026-03-03T21:31:42.544Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-04.md'",
+    "2026-03-03T21:31:52.880Z error [tools] web_fetch failed: fetch failed"
   ]
 }
