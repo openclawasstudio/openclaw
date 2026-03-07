@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-03-07T17:00:50.084Z",
+  "updatedAt": "2026-03-07T19:02:13.719Z",
   "columns": [
     {
       "id": "backlog",
@@ -24,8 +24,8 @@
       "id": "cron-6c11e3ab-d92d-423c-a954-66e295bc2629",
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-07T17:00:50.084Z",
+      "status": "unknown",
+      "updatedAt": "2026-03-07T19:02:13.719Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -34,20 +34,16 @@
           "everyMs": 7200000,
           "anchorMs": 1771873244549
         },
-        "nextRunAtMs": 1772902844549,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1772895670913,
-          "durationMs": 26357
-        }
+        "nextRunAtMs": 1772910044549,
+        "lastRun": null
       }
     },
     {
       "id": "cron-b5501e94-42ef-4a25-8641-5eb5bc09c65f",
       "title": "Polymarket US Politics - 30min monitor (paper portfolio)",
       "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-07T17:00:50.084Z",
+      "status": "unknown",
+      "updatedAt": "2026-03-07T19:02:13.719Z",
       "meta": {
         "jobId": "b5501e94-42ef-4a25-8641-5eb5bc09c65f",
         "enabled": true,
@@ -56,42 +52,16 @@
           "everyMs": 1800000,
           "anchorMs": 1771699300400
         },
-        "nextRunAtMs": 1772903500400,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1772901729490,
-          "durationMs": 29077
-        }
-      }
-    },
-    {
-      "id": "cron-2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
-      "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
-      "columnId": "blocked",
-      "status": "error",
-      "updatedAt": "2026-03-07T17:00:50.084Z",
-      "meta": {
-        "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
-        "enabled": true,
-        "schedule": {
-          "kind": "cron",
-          "expr": "0 3 * * *",
-          "tz": "Asia/Hong_Kong"
-        },
-        "nextRunAtMs": 1772910000000,
-        "lastRun": {
-          "status": "error",
-          "ts": 1772824500020,
-          "durationMs": 900011
-        }
+        "nextRunAtMs": 1772910700400,
+        "lastRun": null
       }
     },
     {
       "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
       "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-07T17:00:50.084Z",
+      "status": "unknown",
+      "updatedAt": "2026-03-07T19:02:13.719Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -101,19 +71,15 @@
           "tz": "Asia/Hong_Kong"
         },
         "nextRunAtMs": 1772928000000,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1772841655149,
-          "durationMs": 55142
-        }
+        "lastRun": null
       }
     },
     {
       "id": "cron-de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
       "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
       "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-07T17:00:50.084Z",
+      "status": "unknown",
+      "updatedAt": "2026-03-07T19:02:13.719Z",
       "meta": {
         "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
         "enabled": true,
@@ -123,11 +89,25 @@
           "tz": "Asia/Hong_Kong"
         },
         "nextRunAtMs": 1772974800000,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1772888436154,
-          "durationMs": 36136
-        }
+        "lastRun": null
+      }
+    },
+    {
+      "id": "cron-2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+      "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
+      "columnId": "doing",
+      "status": "unknown",
+      "updatedAt": "2026-03-07T19:02:13.719Z",
+      "meta": {
+        "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 3 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1772996400000,
+        "lastRun": null
       }
     },
     {
@@ -135,7 +115,7 @@
       "title": "Errors feed: 40 error / 0 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-03-07T17:00:50.084Z"
+      "updatedAt": "2026-03-07T19:02:13.719Z"
     }
   ]
 }
