@@ -171,8 +171,29 @@ async function main() {
   };
 
   try {
-    const cronList = await safeJson("openclaw", ["cron", "list", "--all", "--json"]);
-    const jobs = Array.isArray(cronList?.jobs) ? cronList.jobs : Array.isArray(cronList) ? cronList : [];
+    // Prefer the CLI (it may query the gateway), but fall back to local cron state files
+    // so Mission Control still updates when the gateway is unreachable from this process.
+    let jobs = [];
+    try {
+      const cronList = await safeJson("openclaw", ["cron", "list", "--all", "--json"]);
+      jobs = Array.isArray(cronList?.jobs) ? cronList.jobs : Array.isArray(cronList) ? cronList : [];
+    } catch (e) {
+      const jobsPath = path.join(process.env.HOME || "", ".openclaw", "cron", "jobs.json");
+      try {
+        const raw = JSON.parse(await fs.readFile(jobsPath, "utf8"));
+        jobs = Array.isArray(raw?.jobs) ? raw.jobs : [];
+        activity.events.push({
+          ts: nowIso,
+          type: "cron",
+          title: "Cron feed fallback",
+          summary: `openclaw cron list failed; using ${jobsPath}`,
+          severity: "warn",
+          meta: { error: String(e) }
+        });
+      } catch (e2) {
+        throw new Error(`openclaw cron list failed (${String(e)}), and local fallback failed (${String(e2)})`);
+      }
+    }
 
     for (const j of jobs) {
       const jobId = j.id || j.jobId;
@@ -181,7 +202,23 @@ async function main() {
         const runs = await safeJson("openclaw", ["cron", "runs", "--id", String(jobId), "--limit", "1", "--json"]);
         lastRun = runs?.entries?.[0] || null;
       } catch {
-        // ignore
+        // Fallback: read local runs file (JSONL) and parse the last entry.
+        try {
+          const p = path.join(
+            process.env.HOME || "",
+            ".openclaw",
+            "cron",
+            "runs",
+            `${String(jobId)}.jsonl`
+          );
+          const txt = await fs.readFile(p, "utf8");
+          const lines = txt.split("\n").filter(Boolean);
+          const last = lines.length ? JSON.parse(lines[lines.length - 1]) : null;
+          // Normalize to the shape used below.
+          lastRun = last?.entry || last?.run || last;
+        } catch {
+          // ignore
+        }
       }
 
       const card = {
