@@ -1,12 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-17T16:52:46.227Z",
+  "updatedAt": "2026-03-17T19:00:47.591Z",
   "lines": [
-    "2026-03-17T16:46:04.817Z warn gateway/delivery-recovery {\"subsystem\":\"gateway/delivery-recovery\"} Recovery time budget exceeded — 772 entries deferred to next restart",
-    "2026-03-17T16:47:18.658Z error Error: gateway timeout after 30000ms",
-    "2026-03-17T16:49:52.805Z error [tools] cron failed: gateway timeout after 60000ms",
-    "2026-03-17T16:49:52.816Z error [tools] cron failed: gateway timeout after 60000ms",
-    "2026-03-17T16:51:03.610Z error [tools] cron failed: gateway timeout after 60000ms",
-    "2026-03-17T16:51:03.611Z error [tools] cron failed: gateway timeout after 60000ms"
+    "  2) Treat “gateway timeout” from cron tooling as **degraded observability** (WARN), not “all cron is broken”."
   ]
 }

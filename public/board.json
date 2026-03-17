@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-03-17T16:52:46.227Z",
+  "updatedAt": "2026-03-17T19:00:47.591Z",
   "columns": [
     {
       "id": "backlog",
@@ -21,33 +21,11 @@
   ],
   "cards": [
     {
-      "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
-      "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
-      "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-17T16:52:46.227Z",
-      "meta": {
-        "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
-        "enabled": true,
-        "schedule": {
-          "kind": "cron",
-          "expr": "0 8 * * *",
-          "tz": "Asia/Hong_Kong"
-        },
-        "nextRunAtMs": 1773446400000,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1773765993677,
-          "durationMs": 29540
-        }
-      }
-    },
-    {
       "id": "cron-6c11e3ab-d92d-423c-a954-66e295bc2629",
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-03-17T16:52:46.227Z",
+      "updatedAt": "2026-03-17T19:00:47.591Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -56,7 +34,7 @@
           "everyMs": 7200000,
           "anchorMs": 1771873244549
         },
-        "nextRunAtMs": 1773378044549,
+        "nextRunAtMs": 1773774044549,
         "lastRun": {
           "status": "ok",
           "ts": 1773766046211,
@@ -65,55 +43,11 @@
       }
     },
     {
-      "id": "cron-2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
-      "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
-      "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-17T16:52:46.227Z",
-      "meta": {
-        "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
-        "enabled": true,
-        "schedule": {
-          "kind": "cron",
-          "expr": "0 3 * * *",
-          "tz": "Asia/Hong_Kong"
-        },
-        "nextRunAtMs": 1773428400000,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1773342135308,
-          "durationMs": 135297
-        }
-      }
-    },
-    {
-      "id": "cron-de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
-      "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
-      "columnId": "doing",
-      "status": "ok",
-      "updatedAt": "2026-03-17T16:52:46.227Z",
-      "meta": {
-        "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
-        "enabled": true,
-        "schedule": {
-          "kind": "cron",
-          "expr": "0 21 * * *",
-          "tz": "Asia/Hong_Kong"
-        },
-        "nextRunAtMs": 1773406800000,
-        "lastRun": {
-          "status": "ok",
-          "ts": 1773321217141,
-          "durationMs": 817122
-        }
-      }
-    },
-    {
       "id": "cron-b5501e94-42ef-4a25-8641-5eb5bc09c65f",
       "title": "Polymarket US Politics - 30min monitor (paper portfolio)",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-03-17T16:52:46.227Z",
+      "updatedAt": "2026-03-17T19:00:47.591Z",
       "meta": {
         "jobId": "b5501e94-42ef-4a25-8641-5eb5bc09c65f",
         "enabled": true,
@@ -122,20 +56,86 @@
           "everyMs": 1800000,
           "anchorMs": 1771699300400
         },
-        "nextRunAtMs": 1773373300400,
+        "nextRunAtMs": 1773774700400,
         "lastRun": {
           "status": "ok",
-          "ts": 1773371537581,
-          "durationMs": 37175
+          "ts": 1773772908429,
+          "durationMs": 8019
+        }
+      }
+    },
+    {
+      "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
+      "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-03-17T19:00:47.591Z",
+      "meta": {
+        "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 8 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1773792000000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1773765993677,
+          "durationMs": 29540
+        }
+      }
+    },
+    {
+      "id": "cron-de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
+      "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-03-17T19:00:47.591Z",
+      "meta": {
+        "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 21 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1773838800000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1773766900278,
+          "durationMs": 415143
+        }
+      }
+    },
+    {
+      "id": "cron-2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+      "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-03-17T19:00:47.591Z",
+      "meta": {
+        "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 3 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1773860400000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1773774035849,
+          "durationMs": 35833
         }
       }
     },
     {
       "id": "system-errors",
-      "title": "Errors feed: 5 error / 1 warn (last 250 lines)",
-      "columnId": "blocked",
-      "status": "error",
-      "updatedAt": "2026-03-17T16:52:46.227Z"
+      "title": "Errors feed: 0 error / 1 warn (last 250 lines)",
+      "columnId": "doing",
+      "status": "warn",
+      "updatedAt": "2026-03-17T19:00:47.591Z"
     }
   ]
 }
