@@ -1,7 +1,5 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-17T19:00:47.591Z",
-  "lines": [
-    "  2) Treat “gateway timeout” from cron tooling as **degraded observability** (WARN), not “all cron is broken”."
-  ]
+  "updatedAt": "2026-03-17T21:00:48.994Z",
+  "lines": []
 }
