@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-18T07:00:47.648Z",
+  "updatedAt": "2026-03-18T09:00:48.122Z",
   "lines": [
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Create the daily morning briefing for Alvin to post in Discord #general. Keep it concise, bullet-style.\\n\\nInclude 3 sections:\\n1) HK Weather today + tomorrow (short, actionable; mention rain/thunderstorm likelihood and temps).\\n   - Prefer: https://wttr.in/Hong_Kong?format=j1 (JSON) or https://wttr.in/Hong_Kong?1 (text).\\n   - Avoid lat/long API calls that can error (e.g., latitude/longitude length mismatch). If fetch fails, say “Weather: unavailable right now (fetch failed).”\\n2) MTR service status (check https://www.mtr.com.hk/alert/ryg_line_status_lite.xml).\\n   - If all lines are green (or grey for ended service), say: “MTR: No major delays reported (as of <time>).”\\n   - If any line is yellow/red/typhoon/other non-green status, list the affected line(s) with the status and any message text.\\n3) 3–5 bullets of OpenClaw/AI setup + productivity + cost-saving tips.\\n\\nEnd with: “Anything you want me to prioritize today?”\",",
@@ -32,6 +32,8 @@
     "      \"status\": \"error\",",
     "      \"error\": \"cron announce delivery failed\",",
     "2026-03-18T05:33:29.621Z warn discord/monitor {\"subsystem\":\"discord/monitor\"} {\"listener\":\"DiscordMessageListener\",\"event\":\"MESSAGE_CREATE\",\"durationMs\":144506,\"duration\":\"144.5 seconds\"} Slow listener detected",
-    "2026-03-18T06:34:28.846Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-16.md'"
+    "2026-03-18T06:34:28.846Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-03-16.md'",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"message\": \"Create the daily morning briefing for Alvin to post in Discord #general. Keep it concise, bullet-style.\\n\\nInclude 3 sections:\\n1) HK Weather today + tomorrow (short, actionable; mention rain/thunderstorm likelihood and temps).\\n   - Prefer: https://wttr.in/Hong_Kong?format=j1 (JSON) or https://wttr.in/Hong_Kong?1 (text).\\n   - Avoid lat/long API calls that can error (e.g., latitude/longitude length mismatch). If fetch fails, say “Weather: unavailable right now (fetch failed).”\\n2) MTR service status (check https://www.mtr.com.hk/alert/ryg_line_status_lite.xml).\\n   - If all lines are green (or grey for ended service), say: “MTR: No major delays reported (as of <time>).”\\n   - If any line is yellow/red/typhoon/other non-green status, list the affected line(s) with the status and any message text.\\n3) 3–5 bullets of OpenClaw/AI setup + productivity + cost-saving tips.\\n\\nEnd with: “Anything you want me to prioritize today?”\","
   ]
 }
