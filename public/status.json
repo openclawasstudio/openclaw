@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated. Public. Do not put secrets here.",
-  "updatedAt": "2026-03-19T23:00:47.902Z",
+  "updatedAt": "2026-03-20T01:00:47.611Z",
   "gateway": {
     "ok": true,
     "dashboard": "http://127.0.0.1:18789/"
@@ -13,7 +13,7 @@
     ]
   },
   "model": "openai-codex/gpt-5.2",
-  "sessions": 16,
+  "sessions": 15,
   "raw": {
     "heartbeat": {
       "defaultAgentId": "main",
