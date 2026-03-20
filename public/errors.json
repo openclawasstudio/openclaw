@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-20T21:00:47.627Z",
+  "updatedAt": "2026-03-20T23:00:47.197Z",
   "lines": [
     "2026-03-20T00:00:52.796Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-03-20T00:01:14.709Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -29,6 +29,8 @@
     "        \"lastStatus\": \"error\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"lastStatus\": \"error\",",
-    "2026-03-20T20:33:44.295Z error [tools] read failed: EISDIR: illegal operation on a directory, read"
+    "2026-03-20T20:33:44.295Z error [tools] read failed: EISDIR: illegal operation on a directory, read",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "        \"lastStatus\": \"error\","
   ]
 }
