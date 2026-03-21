@@ -1,17 +1,8 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-21T01:00:48.714Z",
+  "updatedAt": "2026-03-21T03:00:48.193Z",
   "lines": [
-    "2026-03-21T00:33:55.917Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-03-21T00:34:01.039Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-03-21T00:34:01.041Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:0a8b7bc2-eb2b-43da-aebc-4e33592a882d:8a0ee36f-7ec8-4f4f-b33e-427bd5f7f650 error=Error: Outbound not configured for channel: whatsapp conn=9972bdc7…d343 id=b937757d…5a42",
-    "2026-03-21T00:34:01.043Z error Subagent completion direct announce failed for run 8a0ee36f-7ec8-4f4f-b33e-427bd5f7f650: Error: Outbound not configured for channel: whatsapp",
-    "2026-03-21T00:34:03.078Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=a99a3058…7975 id=6dae9079…d410",
-    "2026-03-21T00:34:03.079Z error Subagent completion direct announce failed for run 8a0ee36f-7ec8-4f4f-b33e-427bd5f7f650: Error: Outbound not configured for channel: whatsapp",
-    "2026-03-21T00:34:07.113Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=156d5ea8…8358 id=4b4dc43e…7497",
-    "2026-03-21T00:34:07.115Z error Subagent completion direct announce failed for run 8a0ee36f-7ec8-4f4f-b33e-427bd5f7f650: Error: Outbound not configured for channel: whatsapp",
-    "2026-03-21T00:34:07.124Z info [warn] Subagent announce give up (retry-limit) run=8a0ee36f-7ec8-4f4f-b33e-427bd5f7f650 child=agent:main:subagent:0a8b7bc2-eb2b-43da-aebc-4e33592a882d requester=agent:main:main retries=3 endedAgo=9s",
-    "2026-03-21T00:44:08.775Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
-    "2026-03-21T00:44:08.778Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established"
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-03-21T02:03:45.864Z error [tools] read failed: EISDIR: illegal operation on a directory, read"
   ]
 }
