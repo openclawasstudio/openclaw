@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-03-21T19:02:01.710Z",
+  "updatedAt": "2026-03-21T21:00:47.585Z",
   "columns": [
     {
       "id": "backlog",
@@ -25,7 +25,7 @@
       "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
       "columnId": "done",
       "status": "disabled",
-      "updatedAt": "2026-03-21T19:02:01.710Z",
+      "updatedAt": "2026-03-21T21:00:47.585Z",
       "meta": {
         "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
         "enabled": false,
@@ -47,7 +47,7 @@
       "title": "Polymarket US Politics - 30min monitor (paper portfolio)",
       "columnId": "done",
       "status": "disabled",
-      "updatedAt": "2026-03-21T19:02:01.710Z",
+      "updatedAt": "2026-03-21T21:00:47.585Z",
       "meta": {
         "jobId": "b5501e94-42ef-4a25-8641-5eb5bc09c65f",
         "enabled": false,
@@ -69,7 +69,7 @@
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-03-21T19:02:01.710Z",
+      "updatedAt": "2026-03-21T21:00:47.585Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -78,11 +78,11 @@
           "everyMs": 7200000,
           "anchorMs": 1771873244549
         },
-        "nextRunAtMs": 1774119644549,
+        "nextRunAtMs": 1774126844549,
         "lastRun": {
           "status": "ok",
-          "ts": 1774112465221,
-          "durationMs": 20661
+          "ts": 1774119741010,
+          "durationMs": 29355
         }
       }
     },
@@ -91,7 +91,7 @@
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-03-21T19:02:01.710Z",
+      "updatedAt": "2026-03-21T21:00:47.585Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -113,7 +113,7 @@
       "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-03-21T19:02:01.710Z",
+      "updatedAt": "2026-03-21T21:00:47.585Z",
       "meta": {
         "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
         "enabled": true,
@@ -132,10 +132,10 @@
     },
     {
       "id": "system-errors",
-      "title": "Errors feed: 11 error / 0 warn (last 250 lines)",
+      "title": "Errors feed: 12 error / 0 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-03-21T19:02:01.710Z"
+      "updatedAt": "2026-03-21T21:00:47.585Z"
     }
   ]
 }
