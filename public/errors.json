@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-22T07:00:49.455Z",
+  "updatedAt": "2026-03-22T09:00:47.065Z",
   "lines": [
     "2026-03-22T00:00:09.803Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-03-22T00:01:08.279Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -12,6 +12,7 @@
     "2026-03-22T04:31:24.889Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "2026-03-22T06:01:31.048Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/$(date '+%Y-%m-%d').md'"
+    "2026-03-22T06:01:31.048Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/$(date '+%Y-%m-%d').md'",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
