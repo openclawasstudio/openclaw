@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-26T15:00:47.498Z",
+  "updatedAt": "2026-03-26T17:00:49.542Z",
   "lines": [
     "2026-03-26T00:01:35.099Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-03-26T00:01:50.630Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -11,6 +11,7 @@
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "2026-03-26T07:01:31.173Z error [tools] web_fetch failed: fetch failed",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
