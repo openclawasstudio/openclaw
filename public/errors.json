@@ -1,10 +1,18 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-27T01:00:47.278Z",
+  "updatedAt": "2026-03-27T03:00:48.815Z",
   "lines": [
     "2026-03-27T00:00:19.198Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-03-27T00:32:05.990Z error [tools] web_fetch failed: fetch failed",
     "2026-03-27T00:32:08.808Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-03-27T01:01:36.857Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "2026-03-27T01:01:51.119Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
+    "2026-03-27T01:31:45.729Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "2026-03-27T02:01:38.965Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "2026-03-27T02:01:44.425Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}"
   ]
 }
