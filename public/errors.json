@@ -1,11 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-27T13:00:47.373Z",
+  "updatedAt": "2026-03-27T15:00:49.229Z",
   "lines": [
-    "2026-03-27T00:32:08.808Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
-    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
-    "2026-03-27T01:01:36.857Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-03-27T01:01:51.119Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
     "2026-03-27T01:31:45.729Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
@@ -41,6 +37,10 @@
     "2026-03-27T11:31:36.682Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "{\"error\":true,\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\"}",
     "2026-03-27T12:01:49.520Z error [tools] web_fetch failed: Web fetch failed (400): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "{\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\",\"error\":true}"
+    "{\"reason\":\"Parameter 'latitude' and 'longitude' must have the same number of elements\",\"error\":true}",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-03-27T13:31:41.907Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "2026-03-27T14:01:58.382Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"discord\" while bound to \"webchat\".",
+    "2026-03-27T14:01:58.391Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"discord\" while bound to \"webchat\"."
   ]
 }
