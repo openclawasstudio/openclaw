@@ -1,14 +1,8 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-28T01:00:47.951Z",
+  "updatedAt": "2026-03-28T03:00:47.751Z",
   "lines": [
-    "2026-03-28T00:31:42.979Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-03-28T00:31:42.982Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp runId=announce:v1:agent:main:subagent:5d07d00c-dbd4-4aad-8050-68a28ced160e:06e94ce0-065c-4a6f-9de0-93664ad0957a error=Error: Outbound not configured for channel: whatsapp conn=fbe45e29…4975 id=80a2c193…880c",
-    "2026-03-28T00:31:42.984Z error Subagent completion direct announce failed for run 06e94ce0-065c-4a6f-9de0-93664ad0957a: Error: Outbound not configured for channel: whatsapp",
-    "2026-03-28T00:31:45.058Z info gateway/ws {\"subsystem\":\"gateway/ws\"} ⇄ res ✗ agent 0ms errorCode=UNAVAILABLE errorMessage=Error: Outbound not configured for channel: whatsapp cached=true conn=b4ee20ac…deb4 id=2f28eb72…cbae",
-    "2026-03-28T00:31:45.059Z error Subagent completion direct announce failed for run 06e94ce0-065c-4a6f-9de0-93664ad0957a: Error: Outbound not configured for channel: whatsapp",
-    "2026-03-28T00:31:45.064Z error Delivery failed (whatsapp to heartbeat): Error: Unknown channel: whatsapp",
-    "2026-03-28T00:32:05.417Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
-    "2026-03-28T00:32:05.420Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established"
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
+    "2026-03-28T01:01:25.674Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
   ]
 }
