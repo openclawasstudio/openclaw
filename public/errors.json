@@ -1,8 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-03-28T11:00:47.670Z",
+  "updatedAt": "2026-03-28T13:00:47.630Z",
   "lines": [
-    "2026-03-28T08:31:58.956Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"discord\" while bound to \"webchat\".",
     "2026-03-28T08:31:58.960Z error [tools] message failed: Unknown channel: webchat",
     "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\",",
     "2026-03-28T09:01:28.179Z error [tools] message failed: Explicit message target required for this run. Provide target/targets (and channel when needed).",
@@ -41,6 +40,7 @@
     "2026-03-28T10:31:52.049Z error [tools] message failed: Cross-context messaging denied: action=send target provider \"telegram\" while bound to \"webchat\".",
     "2026-03-28T10:31:52.054Z error [tools] message failed: Unknown target \"test\" for whatsapp.",
     "2026-03-28T10:31:52.059Z error [tools] message failed: Unknown target \"test\" for slack.",
-    "2026-03-28T10:31:52.063Z error [tools] message failed: Unknown channel: email"
+    "2026-03-28T10:31:52.063Z error [tools] message failed: Unknown channel: email",
+    "        \"message\": \"Update Mission Control status feed by running:\\n\\ncd /home/claw/.openclaw/workspace/my-project && node scripts/update-status.mjs --push\\n\\nIf it fails, report the error output.\","
   ]
 }
