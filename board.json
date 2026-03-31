@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-02-20T05:15:21.485Z",
+  "updatedAt": "2026-03-31T19:01:34.473Z",
   "columns": [
     {
       "id": "backlog",
@@ -21,33 +21,99 @@
   ],
   "cards": [
     {
+      "id": "cron-de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
+      "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
+      "columnId": "done",
+      "status": "disabled",
+      "updatedAt": "2026-03-31T19:01:34.473Z",
+      "meta": {
+        "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
+        "enabled": false,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 21 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1773925200000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1773839139545,
+          "durationMs": 339528
+        }
+      }
+    },
+    {
+      "id": "cron-b5501e94-42ef-4a25-8641-5eb5bc09c65f",
+      "title": "Polymarket US Politics - 30min monitor (paper portfolio)",
+      "columnId": "done",
+      "status": "disabled",
+      "updatedAt": "2026-03-31T19:01:34.473Z",
+      "meta": {
+        "jobId": "b5501e94-42ef-4a25-8641-5eb5bc09c65f",
+        "enabled": false,
+        "schedule": {
+          "kind": "every",
+          "everyMs": 1800000,
+          "anchorMs": 1771699300400
+        },
+        "nextRunAtMs": 1773880900400,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1773879108596,
+          "durationMs": 8189
+        }
+      }
+    },
+    {
+      "id": "cron-2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+      "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-03-31T19:01:34.473Z",
+      "meta": {
+        "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
+        "enabled": true,
+        "schedule": {
+          "kind": "cron",
+          "expr": "0 3 * * *",
+          "tz": "Asia/Hong_Kong"
+        },
+        "nextRunAtMs": 1774983600000,
+        "lastRun": {
+          "status": "ok",
+          "ts": 1774897291227,
+          "durationMs": 91210
+        }
+      }
+    },
+    {
       "id": "cron-6c11e3ab-d92d-423c-a954-66e295bc2629",
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-02-20T05:15:21.485Z",
+      "updatedAt": "2026-03-31T19:01:34.473Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
         "schedule": {
           "kind": "every",
-          "everyMs": 300000,
-          "anchorMs": 1771530619147
+          "everyMs": 7200000,
+          "anchorMs": 1771873244549
         },
-        "nextRunAtMs": 1771564519147,
+        "nextRunAtMs": 1774983644549,
         "lastRun": {
           "status": "ok",
-          "ts": 1771564237459,
-          "durationMs": 18304
+          "ts": 1774976473998,
+          "durationMs": 29439
         }
       }
     },
     {
       "id": "cron-409d1e2e-b3f4-4265-aa75-fad679e46770",
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
-      "columnId": "blocked",
-      "status": "error",
-      "updatedAt": "2026-02-20T05:15:21.485Z",
+      "columnId": "doing",
+      "status": "ok",
+      "updatedAt": "2026-03-31T19:01:34.473Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -56,20 +122,20 @@
           "expr": "0 8 * * *",
           "tz": "Asia/Hong_Kong"
         },
-        "nextRunAtMs": 1771632000000,
+        "nextRunAtMs": 1775001600000,
         "lastRun": {
-          "status": "error",
-          "ts": 1771545648769,
-          "durationMs": 48730
+          "status": "ok",
+          "ts": 1774915239093,
+          "durationMs": 39077
         }
       }
     },
     {
       "id": "system-errors",
-      "title": "Errors feed: 40 error / 0 warn (last 250 lines)",
+      "title": "Errors feed: 10 error / 0 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-02-20T05:15:21.485Z"
+      "updatedAt": "2026-03-31T19:01:34.473Z"
     }
   ]
 }
