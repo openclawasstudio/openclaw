@@ -8,11 +8,18 @@ const execFileAsync = promisify(execFile);
 
 const ROOT = path.resolve(process.cwd());
 // Write feeds into public/ so they are served directly by Vercel at /status.json, /errors.json, /board.json
+// Also mirror them at repo root for local tooling/grep convenience.
 const PUBLIC_DIR = path.join(ROOT, "public");
+
 const OUT_PATH = path.join(PUBLIC_DIR, "status.json");
 const ERR_PATH = path.join(PUBLIC_DIR, "errors.json");
 const BOARD_PATH = path.join(PUBLIC_DIR, "board.json");
 const ACTIVITY_PATH = path.join(PUBLIC_DIR, "activity.json");
+
+const OUT_PATH_ROOT = path.join(ROOT, "status.json");
+const ERR_PATH_ROOT = path.join(ROOT, "errors.json");
+const BOARD_PATH_ROOT = path.join(ROOT, "board.json");
+const ACTIVITY_PATH_ROOT = path.join(ROOT, "activity.json");
 
 function guessDiscordOk(channelSummary) {
   if (!Array.isArray(channelSummary)) return undefined;
@@ -36,7 +43,9 @@ async function gitCommitPushIfChanged(nowIso) {
   const changed = por
     .split("\n")
     .filter(Boolean)
-    .some((line) => /\s(public\/(status|errors|board|activity)\.json)$/.test(line));
+    .some((line) =>
+      /\s((public\/)?(status|errors|board|activity)\.json)$/.test(line)
+    );
 
   if (!changed) {
     process.stdout.write("No status/errors change; skip git push.\n");
@@ -45,7 +54,17 @@ async function gitCommitPushIfChanged(nowIso) {
 
   await execFileAsync(
     "git",
-    ["add", "public/status.json", "public/errors.json", "public/board.json", "public/activity.json"],
+    [
+      "add",
+      "public/status.json",
+      "public/errors.json",
+      "public/board.json",
+      "public/activity.json",
+      "status.json",
+      "errors.json",
+      "board.json",
+      "activity.json"
+    ],
     { cwd: ROOT }
   );
   await execFileAsync(
@@ -374,11 +393,26 @@ async function main() {
   // Newest-first
   activity.events.sort((a, b) => (a.ts < b.ts ? 1 : a.ts > b.ts ? -1 : 0));
 
-  await fs.writeFile(OUT_PATH, JSON.stringify(payload, null, 2) + "\n", "utf8");
-  await fs.writeFile(ERR_PATH, JSON.stringify(errors, null, 2) + "\n", "utf8");
-  await fs.writeFile(BOARD_PATH, JSON.stringify(board, null, 2) + "\n", "utf8");
-  await fs.writeFile(ACTIVITY_PATH, JSON.stringify(activity, null, 2) + "\n", "utf8");
-  process.stdout.write(`Wrote ${OUT_PATH} + ${ERR_PATH} + ${BOARD_PATH} + ${ACTIVITY_PATH} @ ${nowIso}\n`);
+  const payloadText = JSON.stringify(payload, null, 2) + "\n";
+  const errorsText = JSON.stringify(errors, null, 2) + "\n";
+  const boardText = JSON.stringify(board, null, 2) + "\n";
+  const activityText = JSON.stringify(activity, null, 2) + "\n";
+
+  // public/ (served)
+  await fs.writeFile(OUT_PATH, payloadText, "utf8");
+  await fs.writeFile(ERR_PATH, errorsText, "utf8");
+  await fs.writeFile(BOARD_PATH, boardText, "utf8");
+  await fs.writeFile(ACTIVITY_PATH, activityText, "utf8");
+
+  // repo root (mirrors)
+  await fs.writeFile(OUT_PATH_ROOT, payloadText, "utf8");
+  await fs.writeFile(ERR_PATH_ROOT, errorsText, "utf8");
+  await fs.writeFile(BOARD_PATH_ROOT, boardText, "utf8");
+  await fs.writeFile(ACTIVITY_PATH_ROOT, activityText, "utf8");
+
+  process.stdout.write(
+    `Wrote ${OUT_PATH} + ${ERR_PATH} + ${BOARD_PATH} + ${ACTIVITY_PATH} (and root mirrors) @ ${nowIso}\n`
+  );
 
   if (shouldPush) {
     await gitCommitPushIfChanged(nowIso);
