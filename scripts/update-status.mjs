@@ -158,7 +158,8 @@ async function main() {
     );
     errorLines = logs
       .split("\n")
-      .filter((l) => /\b(error|warn)\b/i.test(l))
+      // Keep only actual log lines (avoid embedded JSON fragments from tool prompts)
+      .filter((l) => /^\d{4}-\d{2}-\d{2}T.*\b(error|warn)\b/i.test(l))
       .slice(-40);
   } catch (e) {
     errorLines = [`Failed to fetch logs: ${String(e)}`];
