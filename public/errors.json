@@ -1,9 +1,10 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-02T17:00:49.083Z",
+  "updatedAt": "2026-04-02T19:01:38.983Z",
   "lines": [
     "2026-04-02T04:01:36.438Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-04-02.md'",
     "2026-04-02T05:01:31.381Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-02T05:31:37.783Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
+    "2026-04-02T05:31:37.783Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
+    "2026-04-02T19:00:12.158Z error [tools] message failed: guildId required"
   ]
 }
