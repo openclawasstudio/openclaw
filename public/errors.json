@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-02T07:00:48.576Z",
+  "updatedAt": "2026-04-02T09:00:51.014Z",
   "lines": [
     "2026-04-02T04:01:36.438Z error [tools] read failed: ENOENT: no such file or directory, access '/home/claw/.openclaw/workspace/memory/2026-04-02.md'",
     "2026-04-02T05:01:31.381Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
