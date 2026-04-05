@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-05T11:00:47.125Z",
+  "updatedAt": "2026-04-05T13:00:47.661Z",
   "lines": [
     "2026-04-05T00:00:05.600Z error [tools] web_fetch failed: fetch failed"
   ]
