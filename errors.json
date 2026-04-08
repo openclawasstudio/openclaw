@@ -1,15 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-07T23:00:48.260Z",
+  "updatedAt": "2026-04-08T01:00:48.171Z",
   "lines": [
-    "2026-04-07T00:00:08.436Z error [tools] web_fetch failed: Web fetch failed (502): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T10:01:32.343Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T10:01:44.558Z error [tools] web_fetch failed: Web fetch failed (504): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T11:01:26.582Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T13:01:29.583Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T16:01:25.895Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T16:01:43.443Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T18:01:32.554Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-07T19:00:16.384Z error [tools] message failed: guildId required"
+    "2026-04-08T00:01:27.146Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
   ]
 }
