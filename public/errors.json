@@ -1,10 +1,8 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-08T23:00:47.810Z",
+  "updatedAt": "2026-04-09T01:00:48.363Z",
   "lines": [
-    "2026-04-08T00:01:27.146Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-08T02:01:31.064Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-08T03:01:28.269Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
-    "2026-04-08T04:02:21.699Z error [tools] web_fetch failed: Web fetch failed (500): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
+    "2026-04-09T00:55:51.019Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
+    "2026-04-09T00:55:51.021Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established"
   ]
 }
