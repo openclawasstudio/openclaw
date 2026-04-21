@@ -1,5 +1,8 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-21T17:00:47.284Z",
-  "lines": []
+  "updatedAt": "2026-04-21T19:02:38.243Z",
+  "lines": [
+    "2026-04-21T19:00:22.293Z error [tools] message failed: guildId required",
+    "2026-04-21T19:00:22.320Z error [tools] message failed: guildId required"
+  ]
 }
