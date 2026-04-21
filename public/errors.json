@@ -1,7 +1,5 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-21T07:00:48.083Z",
-  "lines": [
-    "2026-04-21T05:56:03.240Z warn gateway/delivery-recovery {\"subsystem\":\"gateway/delivery-recovery\"} Recovery time budget exceeded — 1385 entries deferred to next restart"
-  ]
+  "updatedAt": "2026-04-21T09:00:47.391Z",
+  "lines": []
 }
