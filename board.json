@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from OpenClaw cron jobs. Edit manually only if you disable auto-board.",
-  "updatedAt": "2026-04-23T15:00:48.241Z",
+  "updatedAt": "2026-04-23T17:00:48.626Z",
   "columns": [
     {
       "id": "backlog",
@@ -25,7 +25,7 @@
       "title": "Daily Polymarket Signals (US Politics) 21:00 HK",
       "columnId": "done",
       "status": "disabled",
-      "updatedAt": "2026-04-23T15:00:48.241Z",
+      "updatedAt": "2026-04-23T17:00:48.626Z",
       "meta": {
         "jobId": "de0c2b1b-e74d-4455-9c95-2db8aa101bb3",
         "enabled": false,
@@ -47,7 +47,7 @@
       "title": "Polymarket US Politics - 30min monitor (paper portfolio)",
       "columnId": "done",
       "status": "disabled",
-      "updatedAt": "2026-04-23T15:00:48.241Z",
+      "updatedAt": "2026-04-23T17:00:48.626Z",
       "meta": {
         "jobId": "b5501e94-42ef-4a25-8641-5eb5bc09c65f",
         "enabled": false,
@@ -69,7 +69,7 @@
       "title": "Update and push status.json for Mission Control",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-04-23T15:00:48.241Z",
+      "updatedAt": "2026-04-23T17:00:48.626Z",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
         "enabled": true,
@@ -78,11 +78,11 @@
           "everyMs": 7200000,
           "anchorMs": 1771873244549
         },
-        "nextRunAtMs": 1776956444549,
+        "nextRunAtMs": 1776963644549,
         "lastRun": {
           "status": "ok",
-          "ts": 1776949277081,
-          "durationMs": 32523
+          "ts": 1776956473621,
+          "durationMs": 29056
         }
       }
     },
@@ -91,7 +91,7 @@
       "title": "Daily 3am HK workflow improvement meeting (Hotteok host)",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-04-23T15:00:48.241Z",
+      "updatedAt": "2026-04-23T17:00:48.626Z",
       "meta": {
         "jobId": "2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
         "enabled": true,
@@ -113,7 +113,7 @@
       "title": "Morning briefing (HK) - weather + OpenClaw/AI news",
       "columnId": "doing",
       "status": "ok",
-      "updatedAt": "2026-04-23T15:00:48.241Z",
+      "updatedAt": "2026-04-23T17:00:48.626Z",
       "meta": {
         "jobId": "409d1e2e-b3f4-4265-aa75-fad679e46770",
         "enabled": true,
@@ -135,7 +135,7 @@
       "title": "Errors feed: 1 error / 0 warn (last 250 lines)",
       "columnId": "blocked",
       "status": "error",
-      "updatedAt": "2026-04-23T15:00:48.241Z"
+      "updatedAt": "2026-04-23T17:00:48.626Z"
     }
   ]
 }
