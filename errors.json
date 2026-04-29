@@ -1,6 +1,6 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-04-29T21:00:47.640Z",
+  "updatedAt": "2026-04-29T23:00:48.808Z",
   "lines": [
     "2026-04-29T00:00:07.284Z error [tools] web_fetch failed: Web fetch failed (502): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook).",
     "2026-04-29T19:00:26.514Z error [tools] edit failed: Could not find the exact text in /home/claw/.openclaw/workspace/.gitignore. The old text must match exactly including all whitespace and newlines."
