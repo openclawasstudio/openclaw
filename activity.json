@@ -1,50 +1,50 @@
 {
-  "updatedAt": "2026-05-03T07:00:46.947Z",
+  "updatedAt": "2026-05-03T09:00:47.025Z",
   "events": [
     {
-      "ts": "2026-05-03T07:00:44.565Z",
+      "ts": "2026-05-03T09:00:44.568Z",
       "type": "session",
       "title": "Session: agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629",
-      "summary": "openai-codex/gpt-5.2 · age 5701",
+      "summary": "openai-codex/gpt-5.2 · age 5866",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629",
-        "updatedAt": 1777791644565,
-        "age": 5701,
+        "updatedAt": 1777798844568,
+        "age": 5866,
         "model": "gpt-5.2"
       }
     },
     {
-      "ts": "2026-05-03T07:00:44.565Z",
+      "ts": "2026-05-03T09:00:44.568Z",
       "type": "session",
       "title": "Session: agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:829b502d-0302-444d-89cf-9144944c893a",
-      "summary": "openai-codex/gpt-5.2 · age 5701",
+      "summary": "openai-codex/gpt-5.2 · age 5866",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:829b502d-0302-444d-89cf-9144944c893a",
-        "updatedAt": 1777791644565,
-        "age": 5701,
+        "updatedAt": 1777798844568,
+        "age": 5866,
         "model": "gpt-5.2"
       }
     },
     {
-      "ts": "2026-05-03T06:31:20.306Z",
+      "ts": "2026-05-03T08:31:14.294Z",
       "type": "session",
       "title": "Session: agent:main:main",
-      "summary": "openai-codex/gpt-5.2 · age 1769960",
+      "summary": "openai-codex/gpt-5.2 · age 1776140",
       "severity": "info",
       "meta": {
         "key": "agent:main:main",
-        "updatedAt": 1777789880306,
-        "age": 1769960,
+        "updatedAt": 1777797074294,
+        "age": 1776140,
         "model": "gpt-5.2"
       }
     },
     {
-      "ts": "2026-05-03T05:01:08.726Z",
+      "ts": "2026-05-03T07:01:06.783Z",
       "type": "cron",
       "title": "Cron: Update and push status.json for Mission Control",
-      "summary": "ok · duration 24.2s",
+      "summary": "ok · duration 22.2s",
       "severity": "ok",
       "meta": {
         "jobId": "6c11e3ab-d92d-423c-a954-66e295bc2629",
@@ -56,9 +56,22 @@
         },
         "lastRun": {
           "status": "ok",
-          "ts": 1777784468726,
-          "durationMs": 24169
+          "ts": 1777791666783,
+          "durationMs": 22225
         }
+      }
+    },
+    {
+      "ts": "2026-05-03T07:01:01.000Z",
+      "type": "git",
+      "title": "Git: chore: update mission control (2026-05-03T07:00:46.947Z)",
+      "summary": "claw · 112d0b0",
+      "severity": "info",
+      "meta": {
+        "hash": "112d0b0c0ad1e00eb131979061eef972f6441ebf",
+        "author": "claw",
+        "subject": "chore: update mission control (2026-05-03T07:00:46.947Z)",
+        "date": "2026-05-03 07:01:01 +0000"
       }
     },
     {
@@ -91,12 +104,12 @@
       "ts": "2026-05-03T03:00:44.570Z",
       "type": "session",
       "title": "Session: agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:b8ba6004-6c07-4940-83a9-b3944383ee1b",
-      "summary": "openai-codex/gpt-5.2 · age 14405696",
+      "summary": "openai-codex/gpt-5.2 · age 21605864",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:6c11e3ab-d92d-423c-a954-66e295bc2629:run:b8ba6004-6c07-4940-83a9-b3944383ee1b",
         "updatedAt": 1777777244570,
-        "age": 14405696,
+        "age": 21605864,
         "model": "gpt-5.2"
       }
     },
@@ -138,12 +151,12 @@
       "ts": "2026-05-03T00:00:20.240Z",
       "type": "session",
       "title": "Session: agent:main:discord:channel:1473623046156980359",
-      "summary": "openai-codex/gpt-5.2 · age 25230026",
+      "summary": "openai-codex/gpt-5.2 · age 32430194",
       "severity": "info",
       "meta": {
         "key": "agent:main:discord:channel:1473623046156980359",
         "updatedAt": 1777766420240,
-        "age": 25230026,
+        "age": 32430194,
         "model": "gpt-5.2"
       }
     },
@@ -151,12 +164,12 @@
       "ts": "2026-05-03T00:00:00.019Z",
       "type": "session",
       "title": "Session: agent:main:cron:409d1e2e-b3f4-4265-aa75-fad679e46770",
-      "summary": "openai-codex/gpt-5.2 · age 25250247",
+      "summary": "openai-codex/gpt-5.2 · age 32450415",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:409d1e2e-b3f4-4265-aa75-fad679e46770",
         "updatedAt": 1777766400019,
-        "age": 25250247,
+        "age": 32450415,
         "model": "gpt-5.2"
       }
     },
@@ -164,12 +177,12 @@
       "ts": "2026-05-03T00:00:00.019Z",
       "type": "session",
       "title": "Session: agent:main:cron:409d1e2e-b3f4-4265-aa75-fad679e46770:run:0e003509-f90e-4bda-b247-9fd872aeb5cd",
-      "summary": "openai-codex/gpt-5.2 · age 25250247",
+      "summary": "openai-codex/gpt-5.2 · age 32450415",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:409d1e2e-b3f4-4265-aa75-fad679e46770:run:0e003509-f90e-4bda-b247-9fd872aeb5cd",
         "updatedAt": 1777766400019,
-        "age": 25250247,
+        "age": 32450415,
         "model": "gpt-5.2"
       }
     },
@@ -237,12 +250,12 @@
       "ts": "2026-05-02T19:00:48.680Z",
       "type": "session",
       "title": "Session: agent:main:discord:channel:1474417906837225687",
-      "summary": "openai-codex/gpt-5.2 · age 43201586",
+      "summary": "openai-codex/gpt-5.2 · age 50401754",
       "severity": "info",
       "meta": {
         "key": "agent:main:discord:channel:1474417906837225687",
         "updatedAt": 1777748448680,
-        "age": 43201586,
+        "age": 50401754,
         "model": "gpt-5.2"
       }
     },
@@ -250,12 +263,12 @@
       "ts": "2026-05-02T19:00:00.015Z",
       "type": "session",
       "title": "Session: agent:main:cron:2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
-      "summary": "openai-codex/gpt-5.2 · age 43250251",
+      "summary": "openai-codex/gpt-5.2 · age 50450419",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:2e7a0907-c217-41d8-bb2d-b89de9ef7ce9",
         "updatedAt": 1777748400015,
-        "age": 43250251,
+        "age": 50450419,
         "model": "gpt-5.2"
       }
     },
@@ -263,12 +276,12 @@
       "ts": "2026-05-02T19:00:00.015Z",
       "type": "session",
       "title": "Session: agent:main:cron:2e7a0907-c217-41d8-bb2d-b89de9ef7ce9:run:49057709-a18e-464b-aa18-4beb3c8a2304",
-      "summary": "openai-codex/gpt-5.2 · age 43250251",
+      "summary": "openai-codex/gpt-5.2 · age 50450419",
       "severity": "info",
       "meta": {
         "key": "agent:main:cron:2e7a0907-c217-41d8-bb2d-b89de9ef7ce9:run:49057709-a18e-464b-aa18-4beb3c8a2304",
         "updatedAt": 1777748400015,
-        "age": 43250251,
+        "age": 50450419,
         "model": "gpt-5.2"
       }
     },
@@ -439,19 +452,6 @@
         "author": "claw",
         "subject": "chore: update mission control (2026-05-01T17:00:46.855Z)",
         "date": "2026-05-01 17:01:02 +0000"
-      }
-    },
-    {
-      "ts": "2026-05-01T15:01:05.000Z",
-      "type": "git",
-      "title": "Git: chore: update mission control (2026-05-01T15:00:47.307Z)",
-      "summary": "claw · b5926d0",
-      "severity": "info",
-      "meta": {
-        "hash": "b5926d0e8f049b72553fda1f19538af8038ccdfc",
-        "author": "claw",
-        "subject": "chore: update mission control (2026-05-01T15:00:47.307Z)",
-        "date": "2026-05-01 15:01:05 +0000"
       }
     },
     {
