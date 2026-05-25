@@ -1,10 +1,5 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-05-25T01:00:47.117Z",
-  "lines": [
-    "2026-05-25T00:31:02.225Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
-    "2026-05-25T00:31:02.231Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
-    "2026-05-25T00:40:27.656Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established",
-    "2026-05-25T00:40:27.663Z error gateway/channels/discord {\"subsystem\":\"gateway/channels/discord\"} discord gateway error: Error: WebSocket was closed before the connection was established"
-  ]
+  "updatedAt": "2026-05-25T03:00:47.340Z",
+  "lines": []
 }
