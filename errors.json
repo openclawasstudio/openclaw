@@ -1,5 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-05-25T23:00:47.002Z",
-  "lines": []
+  "updatedAt": "2026-05-26T01:00:47.586Z",
+  "lines": [
+    "2026-05-26T00:00:07.987Z error [tools] web_fetch failed: Web fetch failed (502): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
+  ]
 }
