@@ -1,7 +1,7 @@
 {
   "note": "Auto-generated from gateway logs (filtered warn/error). Public.",
-  "updatedAt": "2026-05-27T23:00:46.896Z",
+  "updatedAt": "2026-05-28T01:00:49.514Z",
   "lines": [
-    "2026-05-27T19:00:13.887Z error [tools] message failed: guildId required"
+    "2026-05-28T00:00:05.989Z error [tools] web_fetch failed: Web fetch failed (502): SECURITY NOTICE: The following content is from an EXTERNAL, UNTRUSTED source (e.g., email, webhook)."
   ]
 }
